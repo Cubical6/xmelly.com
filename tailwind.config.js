@@ -14,6 +14,7 @@ module.exports = {
                 gray: colors.zinc,
                 discord: '#7289da',
                 twitter: '#1DA1F2',
+                yellow: colors.yellow,
             },
             height: {
                 'screen-24': 'calc(100vh - 4rem)'

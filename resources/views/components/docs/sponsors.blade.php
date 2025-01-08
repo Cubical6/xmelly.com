@@ -28,22 +28,25 @@
                     </li>
                 </ul>
 
-                <ul class="pb-8 border-b border-gray-200 dark:border-gray-800 lg:gap-12 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
+                <ul class="pb-8 border-b border-gray-200 dark:border-gray-800 lg:gap-6 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
                     <li class="block">
-                        <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-12" />
+                        <a href="https://laracasts.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/laracasts.svg" class="w-auto h-12" />
                         </a>
                     </li>
-
                     <li class="block">
                         <a href="https://larajobs.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/larajobs.svg" class="w-auto h-12" />
+                            <img src="/www/assets/sponsors/larajobs.svg" class="w-auto h-10" />
                         </a>
                     </li>
-
+                    <li class="block">
+                        <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-10" />
+                        </a>
+                    </li>
                     <li class="block">
                         <a href="https://brokerchooser.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/brokerchooser.svg" class="w-auto h-8" />
+                            <img src="/www/assets/sponsors/brokerchooser.svg" class="w-auto h-12" />
                         </a>
                     </li>
 
@@ -62,12 +65,6 @@
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                         <a href="https://www.worksome.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/worksome.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://laracasts.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/laracasts.svg" class="w-auto h-4" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
