@@ -74,6 +74,12 @@
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
+                        <a href="https://loadforge.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/loadforge.svg" class="w-auto h-5" />
+                        </a>
+                    </li>
+                    <li class="md:block hidden w-full h-0 -mt-12"></li>
+                    <li class="block">
                         <a href="https://route4me.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/route4me.svg" class="w-auto h-5" />
                         </a>
