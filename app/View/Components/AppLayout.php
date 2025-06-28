@@ -18,8 +18,8 @@ class AppLayout extends Component
      */
     public function __construct(
         string $layout,
-        string $title = null,
-        string $description = null
+        ?string $title = null,
+        ?string $description = null
     ) {
         $this->layout = $layout;
         $this->title = $title;

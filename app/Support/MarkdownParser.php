@@ -47,15 +47,15 @@ class MarkdownParser
     private function addDefaultExtensions(Environment $environment, array $config = [])
     {
         if ($config['enable_heading_permalinks'] ?? true) {
-            $environment->addExtension(new HeadingPermalinkExtension());
+            $environment->addExtension(new HeadingPermalinkExtension);
         }
 
-        $environment->addExtension(new AutolinkExtension());
+        $environment->addExtension(new AutolinkExtension);
 
         // $environment->addExtension(new DisallowedRawHtmlExtension());
 
-        $environment->addExtension(new StrikethroughExtension());
-        $environment->addExtension(new TableExtension());
-        $environment->addExtension(new TaskListExtension());
+        $environment->addExtension(new StrikethroughExtension);
+        $environment->addExtension(new TableExtension);
+        $environment->addExtension(new TaskListExtension);
     }
 }

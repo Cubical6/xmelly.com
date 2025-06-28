@@ -8,34 +8,33 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "ext-json": "*",
         "ext-simplexml": "*",
-        "guzzlehttp/guzzle": "^7.9.2",
-        "laravel/framework": "^10.48.28",
-        "laravel/nightwatch": "^1.7",
+        "laravel/framework": "^12.19.3",
+        "laravel/nightwatch": "^1.9.1",
         "laravel/tinker": "^2.10.1",
-        "league/commonmark": "^2.6.1",
+        "league/commonmark": "^2.7.0",
         "spatie/yaml-front-matter": "^2.1.0",
-        "symfony/yaml": "^6.4.18",
-        "torchlight/torchlight-commonmark": "^0.5.5"
+        "symfony/yaml": "^7.4.0",
+        "torchlight/torchlight-laravel": "^0.6.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24.1",
-        "laravel/pint": "^1.20",
-        "laravel/sail": "^1.41.0",
+        "laravel/pint": "^1.22.1",
+        "laravel/sail": "^1.43.1",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^7.11.0",
-        "pestphp/pest": "^2.36",
-        "pestphp/pest-plugin-laravel": "^2.4",
-        "spatie/laravel-ignition": "^2.9"
+        "nunomaduro/collision": "^8.8.2",
+        "pestphp/pest": "^4.0.0",
+        "pestphp/pest-plugin-browser": "^4.0.0",
+        "pestphp/pest-plugin-laravel": "^4.0.0"
     },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "8.2"
+            "php": "8.4"
         },
         "allow-plugins": {
             "pestphp/pest-plugin": true
@@ -76,6 +75,20 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "bump:minor": [
+            "composer update && composer bump"
+        ],
+        "lint": [
+            "pint"
+        ],
+        "test:lint": [
+            "pint --test"
+        ],
+        "test:unit": "pest --parallel",
+        "test": [
+            "@test:lint",
+            "@test:unit"
         ]
     }
 }

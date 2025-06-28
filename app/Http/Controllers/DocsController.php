@@ -19,7 +19,7 @@ class DocsController extends Controller
      *
      * @return Application|Factory|View|RedirectResponse
      */
-    public function __invoke(Documentation $docs, string $page = null)
+    public function __invoke(Documentation $docs, ?string $page = null)
     {
         if ($page === null) {
             return redirect()->route('docs', [self::DEFAULT_PAGE]);

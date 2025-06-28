@@ -1,3 +1,5 @@
 <?php
 
-uses(Tests\TestCase::class)->in('Feature');
+use Illuminate\Foundation\Testing\TestCase;
+
+pest()->uses(TestCase::class);
