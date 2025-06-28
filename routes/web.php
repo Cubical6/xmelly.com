@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn () => file_get_contents(public_path('www/index.html')));
+Route::group(['middleware' => 'auth.basic'], function () {
+    Route::get('/', fn () => file_get_contents(public_path('www/index.html')));
 
-Route::get('/docs/editor-setup', IDEPluginsController::class)->name('ide-plugins');
-Route::get('/docs/{page?}', DocsController::class)->name('docs')->where('page', '.*');
+    Route::get('/docs/editor-setup', IDEPluginsController::class)->name('ide-plugins');
+    Route::get('/docs/{page?}', DocsController::class)->name('docs')->where('page', '.*');
+});
+
