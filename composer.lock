@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7afa53341b869bdad5294402109c6132",
+    "content-hash": "3fb13a175db7f452c3fa36bef95ceb82",
     "packages": [
         {
             "name": "brick/math",
@@ -5777,6 +5777,61 @@
             "time": "2024-12-21T16:25:41+00:00"
         },
         {
+            "name": "torchlight/torchlight-commonmark",
+            "version": "v0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-commonmark-php.git",
+                "reference": "b81987249583ebd73732649542d26d9aeedbbbdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-commonmark-php/zipball/b81987249583ebd73732649542d26d9aeedbbbdb",
+                "reference": "b81987249583ebd73732649542d26d9aeedbbbdb",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^1.5|^2.0",
+                "php": "^7.2|^8.0",
+                "torchlight/torchlight-laravel": "^0.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\Commonmark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Commonmark extension for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "commonmark",
+                "laravel",
+                "markdown",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-commonmark-php/issues",
+                "source": "https://github.com/torchlight-api/torchlight-commonmark-php/tree/v0.6.0"
+            },
+            "time": "2025-06-28T15:51:57+00:00"
+        },
+        {
             "name": "torchlight/torchlight-laravel",
             "version": "v0.6.1",
             "source": {
@@ -6061,16 +6116,16 @@
     "packages-dev": [
         {
             "name": "brianium/paratest",
-            "version": "v7.10.2",
+            "version": "v7.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paratestphp/paratest.git",
-                "reference": "cfcf4de3ec195967d9062e7aa32d17d7a040c91e"
+                "reference": "cfee22cc949d170e61e7111c89ea9fc86aa02ffb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/cfcf4de3ec195967d9062e7aa32d17d7a040c91e",
-                "reference": "cfcf4de3ec195967d9062e7aa32d17d7a040c91e",
+                "url": "https://api.github.com/repos/paratestphp/paratest/zipball/cfee22cc949d170e61e7111c89ea9fc86aa02ffb",
+                "reference": "cfee22cc949d170e61e7111c89ea9fc86aa02ffb",
                 "shasum": ""
             },
             "require": {
@@ -6081,10 +6136,10 @@
                 "fidry/cpu-core-counter": "^1.2.0",
                 "jean85/pretty-package-versions": "^2.1.1",
                 "php": "~8.3.0 || ~8.4.0",
-                "phpunit/php-code-coverage": "^12.3.0",
+                "phpunit/php-code-coverage": "^12.3.1",
                 "phpunit/php-file-iterator": "^6",
                 "phpunit/php-timer": "^8",
-                "phpunit/phpunit": "^12.2.1",
+                "phpunit/phpunit": "^12.2.3",
                 "sebastian/environment": "^8.0.2",
                 "symfony/console": "^6.4.20 || ^7.3.0",
                 "symfony/process": "^6.4.20 || ^7.3.0"
@@ -6098,7 +6153,7 @@
                 "phpstan/phpstan-deprecation-rules": "^2.0.3",
                 "phpstan/phpstan-phpunit": "^2.0.6",
                 "phpstan/phpstan-strict-rules": "^2.0.4",
-                "squizlabs/php_codesniffer": "^3.13.0",
+                "squizlabs/php_codesniffer": "^3.13.2",
                 "symfony/filesystem": "^6.4.13 || ^7.3.0"
             },
             "bin": [
@@ -6139,7 +6194,7 @@
             ],
             "support": {
                 "issues": "https://github.com/paratestphp/paratest/issues",
-                "source": "https://github.com/paratestphp/paratest/tree/v7.10.2"
+                "source": "https://github.com/paratestphp/paratest/tree/v7.10.3"
             },
             "funding": [
                 {
@@ -6151,7 +6206,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2025-06-09T05:52:59+00:00"
+            "time": "2025-06-22T16:27:15+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -6987,33 +7042,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "a22013a7d367bc7b3c3b52b3832fc236e5f85573"
+                "reference": "af3fdceddb937ac894b6e59b75921e46f50cf3f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/a22013a7d367bc7b3c3b52b3832fc236e5f85573",
-                "reference": "a22013a7d367bc7b3c3b52b3832fc236e5f85573",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/af3fdceddb937ac894b6e59b75921e46f50cf3f0",
+                "reference": "af3fdceddb937ac894b6e59b75921e46f50cf3f0",
                 "shasum": ""
             },
             "require": {
                 "brianium/paratest": "^7.10.2",
-                "nunomaduro/collision": "^8.8.1",
+                "nunomaduro/collision": "^8.8.2",
                 "nunomaduro/termwind": "^2.3.1",
                 "pestphp/pest-plugin": "^4.0.0",
                 "pestphp/pest-plugin-arch": "^4.0.0",
                 "pestphp/pest-plugin-mutate": "^4.0.0",
                 "pestphp/pest-plugin-profanity": "^4.0.0",
                 "php": "^8.3.0",
-                "phpunit/phpunit": "^12.2.2"
+                "phpunit/phpunit": "^12.2.5"
             },
             "conflict": {
                 "filp/whoops": "<2.16.0",
-                "phpunit/phpunit": ">12.2.2",
+                "phpunit/phpunit": ">12.2.5",
                 "sebastian/exporter": "<7.0.0",
                 "webmozart/assert": "<1.11.0"
             },
             "require-dev": {
                 "pestphp/pest-dev-tools": "^4.0.0",
+                "pestphp/pest-plugin-browser": "^4.0.0",
                 "pestphp/pest-plugin-type-coverage": "^4.0.0",
                 "symfony/process": "^7.3.0"
             },
@@ -7092,7 +7148,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-28T11:14:45+00:00"
+            "time": "2025-06-28T17:31:45+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
@@ -7240,12 +7296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-browser.git",
-                "reference": "3193cae665a926a0900ec7828bcb95a963d82cb0"
+                "reference": "bcacce8f18f4371d573ed2f886a804831e66a8c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-browser/zipball/3193cae665a926a0900ec7828bcb95a963d82cb0",
-                "reference": "3193cae665a926a0900ec7828bcb95a963d82cb0",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-browser/zipball/bcacce8f18f4371d573ed2f886a804831e66a8c9",
+                "reference": "bcacce8f18f4371d573ed2f886a804831e66a8c9",
                 "shasum": ""
             },
             "require": {
@@ -7264,14 +7320,8 @@
             "require-dev": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "fakerphp/faker": "^1.24.1",
-                "laravel/framework": "^11.45.1",
-                "laravel/pail": "^1.2.3",
-                "laravel/pint": "^1.22.1",
-                "laravel/sail": "^1.43.1",
-                "livewire/livewire": "^3.6.3",
-                "mockery/mockery": "^1.6.12",
                 "nunomaduro/collision": "^8.8.2",
+                "orchestra/testbench": "^10.4",
                 "pestphp/pest-dev-tools": "^4.0.0",
                 "pestphp/pest-plugin-laravel": "^4.0",
                 "pestphp/pest-plugin-type-coverage": "^4.0.0"
@@ -7325,7 +7375,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-06-28T12:34:56+00:00"
+            "time": "2025-06-28T18:37:20+00:00"
         },
         {
             "name": "pestphp/pest-plugin-laravel",
@@ -8207,16 +8257,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.2.2",
+            "version": "12.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "19e25c2da3f8071a683ee1e445b0e24bba25de61"
+                "reference": "b71849b29f7a8d7574e4401873cb8b539896613f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/19e25c2da3f8071a683ee1e445b0e24bba25de61",
-                "reference": "19e25c2da3f8071a683ee1e445b0e24bba25de61",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b71849b29f7a8d7574e4401873cb8b539896613f",
+                "reference": "b71849b29f7a8d7574e4401873cb8b539896613f",
                 "shasum": ""
             },
             "require": {
@@ -8230,13 +8280,13 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.3",
-                "phpunit/php-code-coverage": "^12.3.0",
+                "phpunit/php-code-coverage": "^12.3.1",
                 "phpunit/php-file-iterator": "^6.0.0",
                 "phpunit/php-invoker": "^6.0.0",
                 "phpunit/php-text-template": "^5.0.0",
                 "phpunit/php-timer": "^8.0.0",
                 "sebastian/cli-parser": "^4.0.0",
-                "sebastian/comparator": "^7.0.1",
+                "sebastian/comparator": "^7.1.0",
                 "sebastian/diff": "^7.0.0",
                 "sebastian/environment": "^8.0.2",
                 "sebastian/exporter": "^7.0.0",
@@ -8284,7 +8334,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.2.2"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.2.5"
             },
             "funding": [
                 {
@@ -8308,7 +8358,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-06-13T05:49:28+00:00"
+            "time": "2025-06-27T04:37:55+00:00"
         },
         {
             "name": "phrity/comparison",
