@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOCS_VERSIONS=(
-  master
+  "3.x"
 )
 
 for v in "${DOCS_VERSIONS[@]}"; do
