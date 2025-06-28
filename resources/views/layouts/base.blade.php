@@ -55,10 +55,16 @@
 <body {{ $attributes->except(['title', 'description']) }}>
     <div class="w-full py-3 text-center text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700">
         <p class="mt-0 mb-0">
-            You are currently viewing documentation for the upcoming release of <span class="font-bold">Pest 4.x</span>.
-            <a href="https://pestphp.com" class="underline">Click here</a> to view the latest stable version of Pest.
+            🚀 <span class="font-semibold">Exclusive early access to Pest 4 with revolutionary browser testing!</span> You’re viewing the documentation for the upcoming
+            <span class="font-bold">Pest 4.x</span> release ahead of the public.
+        </p>
+        <p class="mt-0 mb-0">
+            <a href="https://pestphp.com" class="underline">Click here</a> to view the latest stable version, or
+            <a href="/docs/pest-v4-is-here-now-with-browser-testing" class="underline">learn what’s new in Pest 4</a>.
+            <span class="text-red-700 font-semibold">This early access link is private — please do not share it!</span>
         </p>
     </div>
+
 
     {{ $slot }}
 
