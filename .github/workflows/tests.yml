@@ -37,5 +37,8 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-interaction --no-progress --ansi
 
+      - name: Install Playwright
+        run: npx playwright install
+
       - name: Tests
         run: composer test
