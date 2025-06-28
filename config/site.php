@@ -7,5 +7,5 @@ return [
     'discord' => 'https://discord.gg/bMAJv82',
     'twitter' => 'pestphp',
     'github' => 'https://github.com/pestphp/pest',
-    'defaultVersion' => 'master',
+    'defaultVersion' => '4.x',
 ];
