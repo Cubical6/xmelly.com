@@ -53,14 +53,19 @@
 </head>
 
 <body {{ $attributes->except(['title', 'description']) }}>
+    <div class="w-full py-3 text-center text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700">
+        <p class="mt-0 mb-0">
+            You are currently viewing documentation for the upcoming release of <span class="font-bold">Pest 4.x</span>.
+            <a href="https://pestphp.com" class="underline">Click here</a> to view the latest stable version of Pest.
+        </p>
+    </div>
 
-{{ $slot }}
+    {{ $slot }}
 
-{{ $footer ?? "" }}
+    {{ $footer ?? "" }}
 
-@stack('scripts')
+    @stack('scripts')
 
-<script src="https://cdn.usefathom.com/script.js" data-site="NYURIQIN" defer></script>
-
+    <script src="https://cdn.usefathom.com/script.js" data-site="NYURIQIN" defer></script>
 </body>
 </html>
