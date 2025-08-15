@@ -40,8 +40,8 @@
                         </a>
                     </li>
                     <li class="block">
-                        <a href="https://brokerchooser.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/brokerchooser.svg" class="w-auto h-12" />
+                        <a href="https://cmsmax.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/cmsmax.png" class="w-auto h-10" />
                         </a>
                     </li>
                     <li class="block">
