@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => 'auth.basic'], function () {
+Route::group([
+    //
+], function () {
     Route::get('/', fn () => file_get_contents(public_path('www/index.html')));
 
     Route::get('/docs/editor-setup', IDEPluginsController::class)->name('ide-plugins');
