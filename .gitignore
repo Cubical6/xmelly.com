@@ -25,3 +25,6 @@ frankenphp
 frankenphp-worker.php
 
 /caddy
+
+# Mac OS
+.DS_Store

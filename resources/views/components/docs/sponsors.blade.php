@@ -36,7 +36,7 @@
                     </li>
                     <li class="block">
                         <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-10" />
+                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-12" />
                         </a>
                     </li>
                     <li class="block">
@@ -62,11 +62,6 @@
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
-                        <a href="https://www.worksome.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/worksome.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
                         <a href="https://localazy.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/localazy.svg" class="w-auto h-5" />
@@ -75,7 +70,7 @@
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
                         <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-5" />
+                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-4" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
@@ -87,7 +82,7 @@
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
                         <a href="https://route4me.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/route4me.svg" class="w-auto h-5" />
+                            <img src="/www/assets/sponsors/route4me.svg" class="w-auto h-6" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
@@ -98,8 +93,14 @@
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
-                        <a href="https://www.docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                        <a href="https://docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/docuwriter-ai.svg" class="w-auto h-8" />
+                        </a>
+                    </li>
+                    <li class="md:block hidden w-full h-0 -mt-12"></li>
+                    <li class="block">
+                        <a href="https://getnerdify.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/nerdify.png" class="w-auto h-12" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
