@@ -189,9 +189,9 @@
                 </div>
             </section>
 
-            <section id="why" class="text-center py-24 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 overflow-hidden">
-                <p class="uppercase font-thin font-mono text-sm text-white/40">Test with Confidence</p>
-                <h2 class="mx-auto mt-2 max-w-lg text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl font-title">Why developers choose Pest?</h2>
+            <section id="why" class="py-24 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 overflow-hidden">
+                <p class="text-center uppercase font-thin font-mono text-sm text-white/40">Test with Confidence</p>
+                <h2 class="text-center mx-auto mt-2 max-w-lg text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl font-title">Why developers choose Pest?</h2>
 
                 <div class="mt-10 grid gap-10 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                     <div class="relative lg:row-span-2">
@@ -215,7 +215,7 @@
                         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
                                 <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">All-in-one Framework</p>
-                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Everything you need for modern PHP testing, in a single, powerful tool.</p>
                             </div>
                             <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
                                 <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-performance.png" alt="" class="w-full max-lg:max-w-xs" />
@@ -229,10 +229,28 @@
                         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
                             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
                                 <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Readable Failures</p>
-                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Understand test failures at a glance with clear, beautifully formatted output.</p>
                             </div>
-                            <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-                                <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-security.png" alt="" class="h-[min(152px,40cqw)] object-cover" />
+                            <div class="@container flex flex-1 items-center justify-center max-lg:py-6 lg:pb-2">
+<pre class="bg-gray-900/60 text-xs font-mono px-4 rounded-md overflow-x-auto whitespace-pre leading-relaxed text-gray-100 outline outline-white/10">
+<code>
+<span class="text-red-500">FAIL</span>  Tests\MathTest
+  <span class="text-red-400">×</span> adds numbers
+
+<span class="text-red-500">FAILED</span>  Tests\MathTest <span class="text-gray-400">&gt;</span> adds numbers
+<span class="text-red-300">Failed asserting that</span> <span class="text-yellow-300">2</span> <span class="text-red-300">is identical to</span> <span class="text-yellow-300">3</span><span class="text-red-300">.</span>
+
+<span class="text-green-400">at</span> <span class="text-green-500">tests/MathTest.php:3</span>
+
+  <span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
+  <span class="text-gray-500">2</span>
+<span class="text-red-500">→</span><span class="text-gray-500">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {
+  <span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);
+  <span class="text-gray-500">4</span>  });
+</code>
+</pre>
+
+
                             </div>
                         </div>
                         <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-offset-10 outline-white/15"></div>
@@ -243,18 +261,33 @@
                         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                             <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                                 <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Cleaner Syntax</p>
-                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">A modern, expressive syntax that's easy to read and enjoyable to write.</p>
                             </div>
                             <div class="relative min-h-120 w-full grow">
                                 <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
                                     <div class="flex bg-gray-900 outline outline-white/5">
-                                        <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                                            <div class="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">NotificationSetting.jsx</div>
-                                            <div class="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                                        <div class="-mb-px flex flex-1 text-sm/6 font-medium text-gray-400">
+                                            <div class="flex-1 w-full border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">RegisterTest.php</div>
                                         </div>
                                     </div>
-                                    <div class="px-6 pt-6 pb-14">
-                                        <!-- Your code example -->
+                                    <div class="px-4 pt-4 pb-14">
+<pre class="text-gray-100 text-xs font-mono tracking-tight overflow-x-auto whitespace-pre leading-6.5">
+<code><span class="text-gray-400">&lt;?php</span>
+
+<span class="text-blue-400">namespace</span> <span class="text-gray-100">Tests\Feature\Auth</span><span class="text-gray-400">;</span>
+
+<span class="text-blue-400">use</span> <span class="text-gray-100">Tests\TestCase</span><span class="text-gray-400">;</span>
+
+<span class="text-blue-400">class</span> <span class="text-gray-100">RegisterTest</span> <span class="text-blue-400">extends</span> <span class="text-gray-100">TestCase</span>
+<span class="text-gray-400">{</span>
+   <span class="text-blue-400">public function</span> <span class="text-gray-100">test_register_screen</span><span class="text-gray-400">()</span>
+   <span class="text-gray-400">{</span>
+      <span class="text-blue-300">$response</span> <span class="text-gray-400">=</span> <span class="text-pink-400">$this</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">get</span><span class="text-gray-400">(</span><span class="text-green-400">'/register'</span><span class="text-gray-400">);</span>
+      <span class="text-blue-300">$response</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">assertStatus</span><span class="text-gray-400">(</span><span class="text-yellow-300">200</span><span class="text-gray-400">);</span>
+    <span class="text-gray-400">}</span>
+<span class="text-gray-400">}</span>
+</code>
+</pre>
                                     </div>
                                 </div>
                             </div>
