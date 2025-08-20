@@ -356,11 +356,11 @@
 <div class="font-bold mt-2">Failed asserting that <span class="text-yellow-300">2</span> is identical to <span class="text-yellow-300">3</span>.</div>
 at <span class="text-green-500">tests/MathTest.php:4</span>
 
-<span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
-<span class="text-gray-500">2</span>
-<span class="text-gray-500">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {
-<span class="text-gray-500">4</span>      <span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);
-<span class="text-gray-500">5</span>  });
+     <span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
+     <span class="text-gray-500">2</span>
+     <span class="text-gray-500">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {
+<span class="text-red-500 font-bold text-base">→</span>   <span class="text-gray-500 ml-1">4</span>      <span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);
+     <span class="text-gray-500">5</span>  });
 </code>
 </pre>
                                 </div>
@@ -393,7 +393,7 @@ at <span class="text-green-500">tests/MathTest.php:4</span>
                                     const update = (e) => {
                                         if (dragging) {
                                             const rect = $el.getBoundingClientRect();
-                                            x = Math.min(100, Math.max(5, (((e.clientX - rect.left) - (handleWidth / 2)) / rect.width) * 100));
+                                            x = Math.min(100, Math.max(7, (((e.clientX - rect.left) - (handleWidth / 2)) / rect.width) * 100));
                                         }
                                     };
                                     window.addEventListener('mousemove', update);
