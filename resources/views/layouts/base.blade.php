@@ -29,7 +29,7 @@
     @if (str_ends_with(url()->current(), 'announcing-stressless'))
         <meta property="og:image" content="https://pestphp.com/assets/img/stressless-announcement.jpg">
     @else
-        <meta property="og:image" content="https://pestphp.com/assets/img/og.jpg">
+        <meta property="og:image" content="https://pestphp.com/assets/img/og-v4.jpg">
     @endif
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
