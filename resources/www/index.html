@@ -215,7 +215,7 @@
                         <img src="/assets/sponsors/laracasts.svg" alt="Laracasts" class="h-6 md:h-6 object-contain mx-auto" />
                     </a>
                     <a href="https://nativephp.com/?ref=pestphp.com" target="_blank">
-                        <img src="/assets/sponsors/native-php.svg" alt="Native PHP" class="h-6 md:h-7 object-contain mx-auto" />
+                        <img src="/assets/sponsors/native-php.svg?20082025" alt="Native PHP" class="h-6 md:h-7 object-contain mx-auto" />
                     </a>
                 </div>
 
@@ -305,7 +305,7 @@
                 <div class="mt-10 grid grid-cols-1 gap-10 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
                     <div class="flex p-px lg:col-span-4">
                         <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 max-lg:rounded-t-4xl lg:rounded-tl-4xl">
-                            <div class="relative min-h-85 w-full grow">
+                            <div class="relative min-h-90 w-full grow">
                                 <div class="absolute top-6 sm:top-10 right-0 bottom-0 left-6 sm:left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
                                     <div class="flex bg-gray-900 outline outline-white/5">
                                         <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
@@ -316,15 +316,16 @@
                                         </div>
                                     </div>
                                     <div class="px-4 pt-4 pb-14">
-<pre class="text-gray-100 text-xs font-mono tracking-tight overflow-x-auto whitespace-pre leading-5">
+<pre class="text-gray-100 text-xs font-mono tracking-widest overflow-x-auto whitespace-pre leading-[19px]">
 <code><span class="text-gray-400">&lt;?php</span>
 
-<span class="text-blue-400">use</span> <span class="text-gray-100">App\Models\User</span><span class="text-gray-400">;</span>
-
 <span class="text-pink-400">it</span><span class="text-gray-400">(</span><span class="text-green-400">'may login'</span><span class="text-gray-400">,</span> <span class="text-blue-400">function</span> <span class="text-gray-400">()</span> <span class="text-gray-400">{</span>
-    <span class="text-blue-300">$user</span> <span class="text-gray-400">=</span> <span class="text-gray-100">User</span><span class="text-gray-400">::</span><span class="text-blue-400">factory</span><span class="text-gray-400">()-&gt;</span><span class="text-blue-400">create</span><span class="text-gray-400">();</span>
+    <span class="text-blue-300">$user</span> <span class="text-gray-400">=</span> <span class="text-gray-100">App\Models\User</span><span class="text-gray-400">::</span><span class="text-blue-400">factory</span><span class="text-gray-400">()-&gt;</span><span class="text-blue-400">create</span><span class="text-gray-400">();</span>
 
-    <span class="text-pink-400">visit</span><span class="text-gray-400">(</span><span class="text-blue-400">route</span><span class="text-gray-400">(</span><span class="text-green-400">'login'</span><span class="text-gray-400">))</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'email'</span><span class="text-gray-400">,</span> <span class="text-blue-300">$user</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">email</span><span class="text-gray-400">)</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'password'</span><span class="text-gray-400">,</span> <span class="text-green-400">'password'</span><span class="text-gray-400">)</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">press</span><span class="text-gray-400">(</span><span class="text-green-400">'Continue'</span><span class="text-gray-400">)</span>
+    <span class="text-pink-400">visit</span><span class="text-gray-400">(</span><span class="text-blue-400">route</span><span class="text-gray-400">(</span><span class="text-green-400">'login'</span><span class="text-gray-400">))</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'email'</span><span class="text-gray-400">,</span> <span class="text-blue-300">$user</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">email</span><span class="text-gray-400">)</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'password'</span><span class="text-gray-400">,</span> <span class="text-green-400">'password'</span><span class="text-gray-400">)</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">press</span><span class="text-gray-400">(</span><span class="text-green-400">'Continue'</span><span class="text-gray-400">)</span>
         <span class="text-gray-400">-&gt;</span><span class="text-blue-400">assertSee</span><span class="text-gray-400">(</span><span class="text-green-400">'Dashboard'</span><span class="text-gray-400">);</span>
 
     <span class="text-pink-400">$this</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">assertAuthenticatedAs</span><span class="text-gray-400">(</span><span class="text-blue-300">$user</span><span class="text-gray-400">);</span>
@@ -344,21 +345,22 @@
                     </div>
                     <div class="flex p-px lg:col-span-2">
                         <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 lg:rounded-tr-4xl relative">
-                            <div class="relative min-h-85 w-full grow">
+                            <div class="relative min-h-90 w-full grow">
                                 <div class="absolute top-6 lg:top-10 right-0 bottom-0 left-6 lg:left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
-<pre class="text-gray-100 text-xs font-mono tracking-tight overflow-x-auto whitespace-pre leading-5 pl-4">
+<pre class="text-gray-100 text-xs font-mono tracking-tight overflow-x-auto whitespace-pre leading-[19px] pl-4">
 <code>
 <span class="text-red-950 bg-red-500 p-1 font-semibold">FAIL</span> Tests\MathTest
 <div class="flex items-center"><span class="text-red-500 text-lg">×</span> adds numbers</div>
-<hr class="border-red-500 -mt-3.5 -mb-1">
+<hr class="border-red-500 -mt-1">
 <span class="text-red-950 bg-red-500 p-1 font-semibold">FAILED</span> Tests\MathTest <span class="text-gray-400">&gt;</span> adds numbers
 <div class="font-bold mt-2">Failed asserting that <span class="text-yellow-300">2</span> is identical to <span class="text-yellow-300">3</span>.</div>
 at <span class="text-green-500">tests/MathTest.php:4</span>
 
-    <span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
-    <span class="text-gray-500">2</span>
-<div class="flex items-center -mt-1"><span class="text-red-500 font-bold text-lg mr-4">→</span>   <span class="text-gray-500 ml-px mr-3.5">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {</div>
-            <div class="flex items-center -mt-12 ml-19"><span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);</div><div class="flex items-center ml-7 -mt-1"><span class="text-gray-500">4</span>  });</div>
+<span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
+<span class="text-gray-500">2</span>
+<span class="text-gray-500">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {
+<span class="text-gray-500">4</span>      <span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);
+<span class="text-gray-500">5</span>  });
 </code>
 </pre>
                                 </div>
