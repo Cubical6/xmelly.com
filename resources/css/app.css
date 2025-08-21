@@ -62,9 +62,8 @@ button { @apply cursor-pointer; }
 
 li code,p code{border-radius:3px;padding:1px 5px;background-color: var(--tw-prose-pre-bg);color:#fff}
 pre{display:flex;border-radius:.5rem;position:relative;}
-pre .copyBtn{position:absolute;right:0;top:0;height:1.5rem;width:1.5rem;--tw-text-opacity:1;color:rgb(63 63 70 / var(--tw-text-opacity));outline:2px solid transparent;outline-offset:2px}
+pre .copyBtn{position:absolute;display:flex;right:8px;top:10px;height:1.5rem;width:1.5rem;--tw-text-opacity:1;color:rgb(63 63 70 / var(--tw-text-opacity));outline:2px solid transparent;outline-offset:2px}
 pre .copyBtn:active,pre .copyBtn:focus,pre .copyBtn:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
-pre .copyBtn svg{position:absolute;top:0;right:0;margin-right:1rem;margin-top:1.25rem}
 pre code{display:flex;flex:1 1 0%;border-radius:.5rem;--tw-text-opacity:1!important;color:rgb(255 255 255 / var(--tw-text-opacity))!important}
 pre code{font-size:.9em;line-height:2;font-family:Menlo,ui-monospace,SFMono-Regular,Monaco,Consolas,Liberation Mono,Courier New,monospace}
 pre code.torchlight{display:block;overflow-x:auto;padding-top:1rem;padding-bottom:1rem;padding-right:1rem}
