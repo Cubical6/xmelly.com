@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <title>Pest | The elegant PHP testing framework</title>
 
-    <!-- Dont index this page -->
+    {{--
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
+    --}}
 
     <meta name="twitter:site" content="@pestphp">
     <meta name="twitter:card" content="summary_large_image">
