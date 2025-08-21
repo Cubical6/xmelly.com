@@ -1,5 +1,6 @@
 import Alpine from 'alpinejs'
 import docsearch from '@docsearch/js';
+import tippy from 'tippy.js'
 
 window.Alpine = Alpine
 
@@ -9,6 +10,12 @@ import DarkMode from './darkmode';
 
 Alpine.data('offcanvasNav', Nav)
 Alpine.data('ToggleDark', DarkMode);
+
+document.addEventListener('alpine:init', () => {
+    Alpine.directive('tooltip', (el, { expression }) => {
+        tippy(el, { content: expression });
+    });
+});
 
 // Configure DocSearch
 docsearch({

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased font-sans min-h-screen h-full">
     <head>
         <title>Pest | The elegant PHP testing framework</title>
         <link href="https://pestphp.com/" rel="canonical">
@@ -23,262 +23,482 @@
         <link rel="icon" href="/www/favicon.svg" type="image/svg+xml">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-      <script type="module" crossorigin src="/www/index.2216f175.js"></script>
-      <link rel="stylesheet" href="/www/index-2ea85ec5.css">
+      <script type="module" crossorigin src="/www/index.3445f32a.js"></script>
+      <link rel="stylesheet" href="/www/index-83fbc128.css">
     </head>
-    <body class="w-full h-screen text-white bg-gray-900">
-        <div class="w-full py-3 text-center text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700">
-            <p class="mt-0 mb-0">
-                🚀 <span class="font-semibold">You’re viewing the documentation for the upcoming
-                <span class="font-bold">Pest 4.x</span> release.</span>
-            </p>
-            <p class="mt-0 mb-0">
-                <a href="https://v3.pestphp.com" class="underline">Click here</a> to view the latest stable version, or
-                <a href="/docs/pest-v4-is-here-now-with-browser-testing" class="underline">learn what’s new in Pest 4</a>.
-            </p>
+    <body x-data="{ mobileMenuIsOpen: false }" class="relative w-full min-h-screen h-full text-white bg-[#040120] bg-top bg-no-repeat bg-pest">
+        <div x-show="mobileMenuIsOpen" class="backdrop:bg-transparent lg:hidden z-50 relative">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900/50 backdrop-blur-xl px-6 py-14 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                        <a aria-label="Home" href="/" class="-m-1.5 p-1.5 shrink-0">
+                            <span class="sr-only">Pest | The elegant PHP testing framework</span>
+                            <svg class="h-10 transition duration-100 ease-in-out hover:-rotate-2 hover:scale-104 hover:drop-shadow-2xl" alt="Pest Logo" viewBox="0 0 141 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.6103 9.08235C36.4877 4.07843 33.1507 0 28.1687 0H5.60867L4.01067 9.08235H26.5707L26.038 12.1098H3.478L0 32H9.024L10.9197 21.1765H24.4557C29.4377 21.1765 34.2003 17.098 35.0777 12.0941L35.6103 9.08235ZM62.134 12.2039H38.1483L36.7383 19.7961H60.7083L62.134 12.2039ZM71.7847 0H40.2007L38.6027 9.09804H70.2023L71.7847 0ZM34.592 32H66.1917L67.774 22.902H36.19L34.592 32ZM83.8167 0C78.8973 0 74.1503 4.15686 73.1947 9.09804L72.9283 10.6196H72.944C72.333 15.451 75.5603 19.5608 80.4013 19.5608H93.9373L93.342 22.902H70.782L69.184 32H91.744C96.726 32 101.489 27.9216 102.366 22.902L102.946 19.5608C103.823 14.5412 100.486 10.4627 95.504 10.4627H81.968L82.203 9.09804H112.299L108.288 32H117.343L121.354 9.09804H130.378C135.36 9.09804 140.123 5.01961 141 0H83.8167Z" fill="white"/>
+                            </svg>
+                        </a>
+
+                        <button @click="mobileMenuIsOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6"><path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-white/10">
+                            <div class="space-y-2 py-6">
+                                <a href="/docs" class="-mx-3 flex items-center gap-1.5 rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                        <path opacity="0.4" d="M15.0034 7.49802C15.0034 7.49802 15.5032 7.49802 16.003 8.49802C16.003 8.49802 17.5906 5.99802 19.0018 5.49802" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path opacity="0.4" d="M22.0005 6.99802C22.0005 9.75944 19.7627 11.998 17.0024 11.998C14.2421 11.998 12.0044 9.75944 12.0044 6.99802C12.0044 4.2366 14.2421 1.99802 17.0024 1.99802C19.7627 1.99802 22.0005 4.2366 22.0005 6.99802Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.00635 12.998H11.0048" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.00635 16.998H15.0032" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.46 2.02347C7.96254 1.91768 5.56423 2.2034 5.56423 2.2034C4.34586 2.29055 2.01097 2.97387 2.01099 6.96456C2.01101 10.9214 1.98516 15.7993 2.01099 17.744C2.01099 18.932 2.74632 21.7034 5.29148 21.8519C8.3851 22.0324 13.9575 22.0708 16.5143 21.8519C17.1986 21.8133 19.4772 21.2758 19.7656 18.7957C20.0644 16.2264 19.9929 14.8009 19.9929 14.3759" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Documentation
+                                </a>
+                                <a href="https://www.youtube.com/@nunomaduro" class="-mx-3 flex items-center gap-1.5 rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                        <path d="M14.4531 12.8948C14.3016 13.5215 13.5857 13.9644 12.1539 14.8502C10.7697 15.7064 10.0777 16.1346 9.51993 15.9625C9.28934 15.8913 9.07925 15.7562 8.90982 15.57C8.5 15.1198 8.5 14.2465 8.5 12.5C8.5 10.7535 8.5 9.88018 8.90982 9.42995C9.07925 9.24381 9.28934 9.10868 9.51993 9.03753C10.0777 8.86544 10.7697 9.29357 12.1539 10.1498C13.5857 11.0356 14.3016 11.4785 14.4531 12.1052C14.5156 12.3639 14.5156 12.6361 14.4531 12.8948Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        <path d="M20.9977 11C21 11.4701 21 11.9693 21 12.5C21 16.9783 21 19.2175 19.6088 20.6088C18.2175 22 15.9783 22 11.5 22C7.02166 22 4.78249 22 3.39124 20.6088C2 19.2175 2 16.9783 2 12.5C2 8.02166 2 5.78249 3.39124 4.39124C4.78249 3 7.02166 3 11.5 3C12.0307 3 12.5299 3 13 3.00231" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        <path opacity="0.4" d="M18.5 2L18.7579 2.69703C19.0961 3.61102 19.2652 4.06802 19.5986 4.40139C19.932 4.73477 20.389 4.90387 21.303 5.24208L22 5.5L21.303 5.75792C20.389 6.09613 19.932 6.26524 19.5986 6.59861C19.2652 6.93198 19.0961 7.38898 18.7579 8.30297L18.5 9L18.2421 8.30297C17.9039 7.38898 17.7348 6.93198 17.4014 6.59861C17.068 6.26524 16.611 6.09613 15.697 5.75792L15 5.5L15.697 5.24208C16.611 4.90387 17.068 4.73477 17.4014 4.40139C17.7348 4.06802 17.9039 3.61102 18.2421 2.69703L18.5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    </svg>
+                                    Course
+                                </a>
+                                <a href="https://github.com/sponsors/nunomaduro" class="-mx-3 flex items-center gap-1.5 rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                        <path opacity="0.4" d="M8.39559 2.55196C9.8705 1.63811 11.1578 2.00638 11.9311 2.59299C12.2482 2.83351 12.4067 2.95378 12.5 2.95378C12.5933 2.95378 12.7518 2.83351 13.0689 2.59299C13.8422 2.00638 15.1295 1.63811 16.6044 2.55196C18.5401 3.75128 18.9781 7.7079 14.5133 11.046C13.6629 11.6818 13.2377 11.9996 12.5 11.9996C11.7623 11.9996 11.3371 11.6818 10.4867 11.046C6.02195 7.7079 6.45994 3.75128 8.39559 2.55196Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M4 14H6.39482C6.68897 14 6.97908 14.0663 7.24217 14.1936L9.28415 15.1816C9.54724 15.3089 9.83735 15.3751 10.1315 15.3751H11.1741C12.1825 15.3751 13 16.1662 13 17.142C13 17.1814 12.973 17.2161 12.9338 17.2269L10.3929 17.9295C9.93707 18.0555 9.449 18.0116 9.025 17.8064L6.84211 16.7503" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M13 16.5L17.5928 15.0889C18.407 14.8352 19.2871 15.136 19.7971 15.8423C20.1659 16.3529 20.0157 17.0842 19.4785 17.3942L11.9629 21.7305C11.4849 22.0063 10.9209 22.0736 10.3952 21.9176L4 20.0199" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    Sponsor
+                                </a>
+                            </div>
+                            <div class="py-6">
+                                <a href="https://github.com/pestphp/pest" target="_blank" class="isolate inline-flex rounded-md group">
+                                    <div class="relative inline-flex items-center gap-x-1.5 rounded-l-full bg-white/10 px-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10">
+                                        <svg class="size-5" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16c0 7.08 4.58 13.06 10.94 15.18.8.14 1.1-.34 1.1-.76 0-.38-.02-1.64-.02-2.98-4.02.74-5.06-.98-5.38-1.88-.18-.46-.96-1.88-1.64-2.26-.56-.3-1.36-1.04-.02-1.06 1.26-.02 2.16 1.16 2.46 1.64 1.44 2.42 3.74 1.74 4.66 1.32.14-1.04.56-1.74 1.02-2.14-3.56-.4-7.28-1.78-7.28-7.9 0-1.74.62-3.18 1.64-4.3-.16-.4-.72-2.04.16-4.24 0 0 1.34-.42 4.4 1.64 1.28-.36 2.64-.54 4-.54 1.36 0 2.72.18 4 .54 3.06-2.08 4.4-1.64 4.4-1.64.88 2.2.32 3.84.16 4.24 1.02 1.12 1.64 2.54 1.64 4.3 0 6.14-3.74 7.5-7.3 7.9.58.5 1.08 1.46 1.08 2.96 0 2.14-.02 3.86-.02 4.4 0 .42.3.92 1.1.76A16.026 16.026 0 0 0 32 16c0-8.84-7.16-16-16-16Z" fill="currentColor"></path></svg>
+                                        GitHub
+                                    </div>
+                                    <span class="relative ml-px inline-flex items-center rounded-r-full bg-white/10 px-2.5 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10">+10k</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <main id="app">
-            <header class="2xl:min-h-screen md:py-12 flex flex-col items-center justify-center text-center">
-                <div class="from-gray-200 via-black to-black bg-gradient-to-br flex items-center justify-center rounded-[0.55rem] select-none mt-16 md:mt-0" style="padding:1px">
-                    <figure class="shadow-white flex items-center justify-center w-32 h-32 p-3 bg-black rounded-lg shadow-2xl">
-                        <img src="/www/assets/logo.svg" alt="pestphp logo" class="ml-1">
-                    </figure>
+
+        <svg class="pointer-events-none fixed inset-0 -z-10 h-screen mix-blend-overlay opacity-80" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" preserveAspectRatio="none">
+            <defs>
+                <filter id="noise-filter">
+                    <feTurbulence type="turbulence" baseFrequency="1" numOctaves="1" stitchTiles="stitch" result="noise"></feTurbulence>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" result="coloredNoise"></feColorMatrix>
+                </filter>
+            </defs>
+            <rect width="100%" height="100%" filter="url(#noise-filter)"></rect>
+        </svg>
+
+        <div class="pointer-events-none fixed inset-0 min-h-screen h-full -z-20 [mask-image:radial-gradient(ellipse_at_100%_100%,black_20%,transparent_80%)] opacity-90">
+            <div class="pointer-events-none absolute inset-0 overflow-hidden">
+                <div class="beam-background absolute -inset-[20px] z-20 blur-[80px] filter"></div>
+            </div>
+        </div>
+
+        <header class="mx-auto max-w-7xl px-6 lg:px-8 py-8">
+            <div class="absolute inset-x-0 top-8 z-0">
+                <div class="border-t border-white/10"></div>
+                <div class="mt-2 border-t border-white/10"></div>
+            </div>
+
+            <div class="motion-preset-focus motion-duration-2000">
+                <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between py-6">
+                    <div class="flex items-center gap-4">
+                        <a aria-label="Home" href="/" class="-m-1.5 p-1.5 shrink-0">
+                            <span class="sr-only">Pest | The elegant PHP testing framework</span>
+                            <svg class="h-10 transition duration-100 ease-in-out hover:-rotate-2 hover:scale-104 hover:drop-shadow-2xl" alt="Pest Logo" viewBox="0 0 141 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.6103 9.08235C36.4877 4.07843 33.1507 0 28.1687 0H5.60867L4.01067 9.08235H26.5707L26.038 12.1098H3.478L0 32H9.024L10.9197 21.1765H24.4557C29.4377 21.1765 34.2003 17.098 35.0777 12.0941L35.6103 9.08235ZM62.134 12.2039H38.1483L36.7383 19.7961H60.7083L62.134 12.2039ZM71.7847 0H40.2007L38.6027 9.09804H70.2023L71.7847 0ZM34.592 32H66.1917L67.774 22.902H36.19L34.592 32ZM83.8167 0C78.8973 0 74.1503 4.15686 73.1947 9.09804L72.9283 10.6196H72.944C72.333 15.451 75.5603 19.5608 80.4013 19.5608H93.9373L93.342 22.902H70.782L69.184 32H91.744C96.726 32 101.489 27.9216 102.366 22.902L102.946 19.5608C103.823 14.5412 100.486 10.4627 95.504 10.4627H81.968L82.203 9.09804H112.299L108.288 32H117.343L121.354 9.09804H130.378C135.36 9.09804 140.123 5.01961 141 0H83.8167Z" fill="white"/>
+                            </svg>
+                        </a>
+
+                        <button x-tooltip="Soon" class="flex items-center gap-0.5 rounded-full py-1.5 pr-1.5 pl-2.5 text-xs font-medium tabular-nums bg-white/10 text-white hover:bg-white/15 ring-1 ring-white/15 hover:ring-white/20" aria-label="Select version of library" type="button" aria-haspopup="menu">
+                            v4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="size-4 fill-gray-300"><path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+
+                    <div class="flex lg:hidden">
+                        <button @click="mobileMenuIsOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 uppercase text-sm">Menu</button>
+                    </div>
+
+                    <div class="hidden lg:flex lg:gap-x-8 items-center">
+                        <a href="/docs" class="cursor-pointer flex pointer-events-auto rounded-full w-full items-center text-sm h-8 pl-3.5 pr-3 text-white/50 bg-white/10 hover:bg-white/15 ring-1 ring-white/15 hover:ring-white/20 focus:outline-primary justify-between truncate gap-2 w-100">
+                            <div class="flex items-center gap-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="-ml-1.5 size-5" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2ZM4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11Z" fill="currentColor"></path></svg>
+                                <div class="truncate min-w-0">Search...</div>
+                            </div>
+                            <span class="flex-none text-xs font-semibold">⌘K</span>
+                        </a>
+
+                        <div class="lg:flex lg:gap-x-5">
+                            <a href="/docs" class="font-semibold text-white flex text-sm items-center gap-1.5 hover:text-pink-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                    <path opacity="0.4" d="M15.0034 7.49802C15.0034 7.49802 15.5032 7.49802 16.003 8.49802C16.003 8.49802 17.5906 5.99802 19.0018 5.49802" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path opacity="0.4" d="M22.0005 6.99802C22.0005 9.75944 19.7627 11.998 17.0024 11.998C14.2421 11.998 12.0044 9.75944 12.0044 6.99802C12.0044 4.2366 14.2421 1.99802 17.0024 1.99802C19.7627 1.99802 22.0005 4.2366 22.0005 6.99802Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.00635 12.998H11.0048" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.00635 16.998H15.0032" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10.46 2.02347C7.96254 1.91768 5.56423 2.2034 5.56423 2.2034C4.34586 2.29055 2.01097 2.97387 2.01099 6.96456C2.01101 10.9214 1.98516 15.7993 2.01099 17.744C2.01099 18.932 2.74632 21.7034 5.29148 21.8519C8.3851 22.0324 13.9575 22.0708 16.5143 21.8519C17.1986 21.8133 19.4772 21.2758 19.7656 18.7957C20.0644 16.2264 19.9929 14.8009 19.9929 14.3759" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Documentation
+                            </a>
+                            <a href="https://www.youtube.com/@nunomaduro" target="_blank" class="font-semibold text-white flex text-sm items-center gap-1.5 hover:text-pink-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                    <path d="M14.4531 12.8948C14.3016 13.5215 13.5857 13.9644 12.1539 14.8502C10.7697 15.7064 10.0777 16.1346 9.51993 15.9625C9.28934 15.8913 9.07925 15.7562 8.90982 15.57C8.5 15.1198 8.5 14.2465 8.5 12.5C8.5 10.7535 8.5 9.88018 8.90982 9.42995C9.07925 9.24381 9.28934 9.10868 9.51993 9.03753C10.0777 8.86544 10.7697 9.29357 12.1539 10.1498C13.5857 11.0356 14.3016 11.4785 14.4531 12.1052C14.5156 12.3639 14.5156 12.6361 14.4531 12.8948Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M20.9977 11C21 11.4701 21 11.9693 21 12.5C21 16.9783 21 19.2175 19.6088 20.6088C18.2175 22 15.9783 22 11.5 22C7.02166 22 4.78249 22 3.39124 20.6088C2 19.2175 2 16.9783 2 12.5C2 8.02166 2 5.78249 3.39124 4.39124C4.78249 3 7.02166 3 11.5 3C12.0307 3 12.5299 3 13 3.00231" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path opacity="0.4" d="M18.5 2L18.7579 2.69703C19.0961 3.61102 19.2652 4.06802 19.5986 4.40139C19.932 4.73477 20.389 4.90387 21.303 5.24208L22 5.5L21.303 5.75792C20.389 6.09613 19.932 6.26524 19.5986 6.59861C19.2652 6.93198 19.0961 7.38898 18.7579 8.30297L18.5 9L18.2421 8.30297C17.9039 7.38898 17.7348 6.93198 17.4014 6.59861C17.068 6.26524 16.611 6.09613 15.697 5.75792L15 5.5L15.697 5.24208C16.611 4.90387 17.068 4.73477 17.4014 4.40139C17.7348 4.06802 17.9039 3.61102 18.2421 2.69703L18.5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                                YouTube
+                            </a>
+                            <a href="https://github.com/sponsors/nunomaduro" target="_blank" class="font-semibold text-white flex text-sm items-center gap-1.5 hover:text-pink-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5" fill="none">
+                                    <path opacity="0.4" d="M8.39559 2.55196C9.8705 1.63811 11.1578 2.00638 11.9311 2.59299C12.2482 2.83351 12.4067 2.95378 12.5 2.95378C12.5933 2.95378 12.7518 2.83351 13.0689 2.59299C13.8422 2.00638 15.1295 1.63811 16.6044 2.55196C18.5401 3.75128 18.9781 7.7079 14.5133 11.046C13.6629 11.6818 13.2377 11.9996 12.5 11.9996C11.7623 11.9996 11.3371 11.6818 10.4867 11.046C6.02195 7.7079 6.45994 3.75128 8.39559 2.55196Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                    <path d="M4 14H6.39482C6.68897 14 6.97908 14.0663 7.24217 14.1936L9.28415 15.1816C9.54724 15.3089 9.83735 15.3751 10.1315 15.3751H11.1741C12.1825 15.3751 13 16.1662 13 17.142C13 17.1814 12.973 17.2161 12.9338 17.2269L10.3929 17.9295C9.93707 18.0555 9.449 18.0116 9.025 17.8064L6.84211 16.7503" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13 16.5L17.5928 15.0889C18.407 14.8352 19.2871 15.136 19.7971 15.8423C20.1659 16.3529 20.0157 17.0842 19.4785 17.3942L11.9629 21.7305C11.4849 22.0063 10.9209 22.0736 10.3952 21.9176L4 20.0199" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                Sponsor
+                            </a>
+                        </div>
+
+                        <a href="https://github.com/pestphp/pest" target="_blank" class="isolate inline-flex group rounded-3xl">
+                            <div class="relative inline-flex items-center gap-x-1.5 rounded-l-full bg-white/10 px-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10 border-y-1 border-l-1 border-white/5">
+                                <svg class="size-5" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16c0 7.08 4.58 13.06 10.94 15.18.8.14 1.1-.34 1.1-.76 0-.38-.02-1.64-.02-2.98-4.02.74-5.06-.98-5.38-1.88-.18-.46-.96-1.88-1.64-2.26-.56-.3-1.36-1.04-.02-1.06 1.26-.02 2.16 1.16 2.46 1.64 1.44 2.42 3.74 1.74 4.66 1.32.14-1.04.56-1.74 1.02-2.14-3.56-.4-7.28-1.78-7.28-7.9 0-1.74.62-3.18 1.64-4.3-.16-.4-.72-2.04.16-4.24 0 0 1.34-.42 4.4 1.64 1.28-.36 2.64-.54 4-.54 1.36 0 2.72.18 4 .54 3.06-2.08 4.4-1.64 4.4-1.64.88 2.2.32 3.84.16 4.24 1.02 1.12 1.64 2.54 1.64 4.3 0 6.14-3.74 7.5-7.3 7.9.58.5 1.08 1.46 1.08 2.96 0 2.14-.02 3.86-.02 4.4 0 .42.3.92 1.1.76A16.026 16.026 0 0 0 32 16c0-8.84-7.16-16-16-16Z" fill="currentColor"></path></svg>
+                            </div>
+                            <span class="relative ml-px inline-flex items-center rounded-r-full bg-white/10 pr-2.5 pl-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10 border-y-1 border-r-1 border-white/5">+10k</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="absolute inset-x-0 top-28 z-0">
+                <div class="border-t border-white/10"></div>
+                <div class="mt-2 border-t border-white/10"></div>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="text-center py-12 lg:py-24 max-w-7xl px-6 lg:px-8 mx-auto">
+                <div class="mb-8 flex justify-center motion-preset-blur-up-lg motion-delay-[300ms] motion-duration-1000">
+                    <div class="relative rounded-full px-3 py-1 text-sm/6 text-white/90 ring-1 ring-white/10 hover:ring-white/20">Pest v4.0 Talk <span class="sm:hidden">-</span><span class="hidden sm:inline-block">- Nuno Maduro at Laracon US 2025.</span> <a href="https://www.youtube.com/watch?v=f5gAgwwwwOI" target="_blank" class="font-semibold text-pink-400"><span aria-hidden="true" class="absolute inset-0"></span>Watch now <span aria-hidden="true">→</span></a></div>
                 </div>
-                <h1 class="sr-only">PESTPHP</h1>
-                <h2 class="lg:text-8xl md:text-6xl drop-shadow-2xl md:mt-9 mt-6 text-3xl font-bold">
-                    The elegant PHP <br>testing framework
-                </h2>
-                <h3 class="lg:text-2xl md:text-xl px-6 mt-6 text-lg leading-tight">
-                    Pest is a testing framework with a focus on simplicity, <br class="sm:block hidden">meticulously designed to bring back the joy of testing in PHP.
-                </h3>
-                <div class="sm:flex-row sm:space-x-6 flex flex-col items-center mt-6">
-                    <a href="/docs/pest-v4-is-here-now-with-browser-testing"
-                        class="sm:w-auto focus:outline-none w-full px-12 py-4 text-lg font-bold text-gray-900 bg-white border border-white rounded-lg">
-                        Get started
+
+                <h1 class="mt-8 text-4xl sm:text-5xl/14 xl:text-6xl/15 tracking-tight font-title motion-preset-blur-up-lg motion-delay-[200ms] motion-duration-1000">The elegant PHP testing framework<br class="hidden lg:block"> with built-in
+                    <span class="relative whitespace-nowrap">
+                        <span class="text-pink-500">browser testing.</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 384 16" class="absolute bottom-0 left-0 w-full text-white/20 -z-10"><path fill="currentColor" d="M383 14c-9-4-23-5-34-6a1664 1664 0 0 0-105-6A1971 1971 0 0 0 3 8c-4 0-4 3 0 3l90-2a3205 3205 0 0 1 245 5c15 1 29 3 44 2 2 0 3-1 1-2Z"/></svg>
+                    </span>
+                </h1>
+                <p class="lg:text-lg font-medium text-white/80 mt-6 font-mono tracking-tight motion-preset-blur-up-lg motion-delay-[400ms] motion-duration-1000">Pest is a testing framework with a focus on simplicity,<br class="hidden md:block"> meticulously designed to bring back the joy of testing in PHP.</p>
+
+                <div class="mt-8 flex items-center justify-center gap-x-5 motion-preset-blur-up-lg motion-delay-[600ms] motion-duration-1000">
+                    <a class="z-1 inline-block text-sm rounded-4xl bg-pink-500 px-6 sm:px-8 py-2.5 font-semibold text-white hover:scale-105 transition duration-100 shadow-2xl" href="https://pestphp.com/docs/pest-v4-is-here-now-with-browser-testing">Start Testing</a>
+                    <a class="z-1 inline-block text-sm rounded-4xl bg-indigo-800 px-6 sm:px-8 py-2.5 font-semibold text-white hover:scale-105 transition duration-100 shadow-2xl" href="https://github.com/pestphp/pest" target="_blank">Source Code</a>
+                </div>
+            </section>
+
+            <section id="partners" class="text-center py-8 sm:py-12 mx-auto max-w-7xl px-6 lg:px-8 motion-preset-blur-up-md motion-delay-[600ms] motion-duration-1000">
+                <p class="text-xs md:text-base uppercase font-thin font-mono tracking-widest text-white/40">These companies sponsor Pest Framework</p>
+                <div class="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 lg:grid-cols-4 sm:gap-x-10 lg:mx-0 lg:max-w-none">
+                    <a href="https://cmsmax.com/?ref=pestphp" target="_blank">
+                        <img src="/www/assets/sponsors/cmsmax.png" alt="CMS Max" class="h-7 md:h-9 object-contain mx-auto" />
                     </a>
-                    <a href="https://github.com/pestphp/pest" target="_blank"
-                        class="sm:w-auto focus:outline-none sm:mt-0 w-full px-12 py-4 mt-3 text-lg font-bold text-white bg-transparent border border-white rounded-lg">
-                        Source code
+                    <a href="https://www.coderabbit.ai/?ref=pestphp" target="_blank">
+                        <img src="/www/assets/sponsors/coderabbit.svg" alt="CodeRabbit" class="h-7 md:h-9 object-contain mx-auto" />
+                    </a>
+                    <a href="https://laracasts.com/?ref=pestphp" target="_blank">
+                        <img src="/www/assets/sponsors/laracasts.svg" alt="Laracasts" class="h-6 md:h-6 object-contain mx-auto" />
+                    </a>
+                    <a href="https://nativephp.com/?ref=pestphp.com" target="_blank">
+                        <img src="/www/assets/sponsors/native-php.svg?20082025" alt="Native PHP" class="h-6 md:h-7 object-contain mx-auto" />
                     </a>
                 </div>
 
-                <h4 class="mt-12 text-lg font-semibold text-gray-100">
-                    Partners
-                </h4>
-                <ul class="lg:gap-12 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
-                    <li>
-                        <a href="https://cmsmax.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/cmsmax.png" class="w-auto h-10" />
+                <div class="relative mx-auto pt-8 will-change-transform overflow-hidden" style="mask-image: linear-gradient(to right, #0000, #000 10%, #000 90%, #0000)">
+                    <div class="flex items-center w-max gap-x-12" style="animation: marquee 50s linear infinite">
+                        <a href="https://akaunting.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/akaunting.svg" alt="Akaunting" class="h-6" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-12" />
+                        <a href="https://www.docuwriter.ai/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/docuwriter-ai.svg" alt="DocuWriter" class="h-8" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://laracasts.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/laracasts.svg" class="w-auto h-8" />
+                        <a href="https://localazy.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/localazy.svg" alt="Localazy" class="h-5.5" />
                         </a>
-                    </li>
-                    <li class="md:hidden sm:block hidden w-full h-0"></li>
-                    <li>
-                        <a href="https://nativephp.com/mobile?ref=pestphp.com" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/native-php.svg" class="w-auto h-14" />
+                        <a href="https://forge.laravel.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/forge.svg" alt="Forge" class="h-4.5" />
                         </a>
-                    </li>
-                </ul>
-                <ul class="drop-shadow md:gap-6 lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
-                    <li>
-                        <a href="https://akaunting.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/akaunting.svg" class="w-auto h-6" />
+                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" alt="Devtools for Livewire" class="h-4.5" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/docuwriter-ai.svg" class="w-auto h-10" />
+                        <a href="https://loadforge.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/loadforge.svg" alt="Load Forge" class="h-5" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://localazy.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/localazy.svg" class="w-auto h-5" />
+                        <a href="https://route4me.com/pt?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/route4me.svg" alt="Route4Me" class="h-6" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://forge.laravel.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/forge.svg" class="w-auto h-5" />
+                        <a href="https://spatie.be/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/spatie.svg" alt="Spatie" class="h-6" />
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-5" />
+                        <a href="https://getnerdify.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/nerdify.png" alt="Nerdify" class="h-14" />
                         </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="md:-mt-7">
-                        <a href="https://loadforge.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/loadforge.svg" class="w-auto h-5" />
+                        <a href="https://www.zapiet.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/zapiet.svg" alt="Zapiet" class="h-5" />
                         </a>
-                    </li>
-                    <li class="md:-mt-7">
-                        <a href="https://route4me.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/route4me.svg" class="w-auto h-6" />
+                        <a href="https://wefolio.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/wefolio.svg" alt="WeFolio" class="h-6" />
                         </a>
-                    </li>
-                    <li class="md:-mt-7">
-                        <a href="https://spatie.be/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/spatie.svg" class="w-auto h-8" />
+                        <a href="https://eufaturo.pt/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/eufaturo.svg" alt="EuFaturo" class="h-5" />
                         </a>
-                    </li>
-                    <li class="md:-mt-7">
-                        <a href="https://getnerdify.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/nerdify.png" class="w-auto h-16" />
-                        </a>
-                    </li>
-                    <li class="md:-mt-7">
-                        <a href="https://zapiet.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/zapiet.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                </ul>
-                <a href="https://github.com/sponsors/nunomaduro"
-                    class="table px-4 py-1.5 text-xs font-semibold text-black bg-white shadow-sm rounded mt-6">
-                    Place your logo here
-                </a>
-            </header>
 
-            <section class="sm:py-24 md:w-full sm:w-2/3 container max-w-5xl py-12 text-center">
-                <h4 class="md:text-3xl text-2xl font-bold text-center">What makes Pest special…</h4>
-                <ul class="md:flex md:mt-12 md:space-3 md:px-0 px-6 mt-6">
-                    <li class="md:w-1/2">
-                        <div class="border-gray-700/50 md:w-40 md:h-40 flex items-center justify-center w-32 h-32 p-6 mx-auto border rounded-full">
-                            <div class="from-gray-500 to-black bg-gradient-to-br md:w-32 md:h-32 container flex items-center justify-center w-24 h-24 max-w-3xl rotate-45 rounded-full select-none" style="padding:1px">
-                                <figure class="md:w-32 md:h-32 flex items-center justify-center w-24 h-24 bg-black rounded-full">
-                                    <svg viewBox="0 0 24 24" fill="none" class="stroke-pink w-12 h-12 -rotate-45">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                                    </svg>
-                                </figure>
+                        <a href="https://akaunting.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/akaunting.svg" alt="Akaunting" class="h-6" />
+                        </a>
+                        <a href="https://www.docuwriter.ai/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/docuwriter-ai.svg" alt="DocuWriter" class="h-8" />
+                        </a>
+                        <a href="https://localazy.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/localazy.svg" alt="Localazy" class="h-5.5" />
+                        </a>
+                        <a href="https://forge.laravel.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/forge.svg" alt="Forge" class="h-4.5" />
+                        </a>
+                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" alt="Devtools for Livewire" class="h-4.5" />
+                        </a>
+                        <a href="https://loadforge.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/loadforge.svg" alt="Load Forge" class="h-5" />
+                        </a>
+                        <a href="https://route4me.com/pt?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/route4me.svg" alt="Route4Me" class="h-6" />
+                        </a>
+                        <a href="https://spatie.be/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/spatie.svg" alt="Spatie" class="h-6" />
+                        </a>
+                        <a href="https://getnerdify.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/nerdify.png" alt="Nerdify" class="h-14" />
+                        </a>
+                        <a href="https://www.zapiet.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/zapiet.svg" alt="Zapiet" class="h-5" />
+                        </a>
+                        <a href="https://wefolio.com/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/wefolio.svg" alt="WeFolio" class="h-6" />
+                        </a>
+                        <a href="https://eufaturo.pt/?ref=pestphp" target="_blank">
+                            <img src="/www/assets/sponsors/eufaturo.svg" alt="EuFaturo" class="h-5" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="why" class="py-14 md:py-24 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 overflow-hidden">
+                <p class="text-center text-xs md:text-base uppercase font-thin font-mono tracking-widest text-white/40">Test with Confidence</p>
+                <h2 class="text-center mx-auto mt-2 max-w-2xl text-2xl tracking-tight text-balance text-white sm:text-5xl font-title">Why developers choose Pest?</h2>
+
+                <div class="mt-10 grid grid-cols-1 gap-10 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+                    <div class="flex p-px lg:col-span-4">
+                        <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 max-lg:rounded-t-4xl lg:rounded-tl-4xl">
+                            <div class="relative min-h-90 w-full grow">
+                                <div class="absolute top-6 sm:top-10 right-0 bottom-0 left-6 sm:left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
+                                    <div class="flex bg-gray-900 outline outline-white/5">
+                                        <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                                            <div class="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">BrowserTest.php</div>
+                                            <div class="border-r border-gray-600/10 px-4 py-2">FeatureTest.php</div>
+                                            <div class="border-r border-gray-600/10 px-4 py-2">UnitTest.php</div>
+                                            <div class="border-r border-gray-600/10 px-4 py-2">ArchTest.php</div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 pt-4 pb-14">
+<pre class="text-gray-100 text-xs font-mono tracking-widest overflow-x-auto whitespace-pre leading-[19px]">
+<code><span class="text-gray-400">&lt;?php</span>
+
+<span class="text-pink-400">it</span><span class="text-gray-400">(</span><span class="text-green-400">'may login'</span><span class="text-gray-400">,</span> <span class="text-blue-400">function</span> <span class="text-gray-400">()</span> <span class="text-gray-400">{</span>
+    <span class="text-blue-300">$user</span> <span class="text-gray-400">=</span> <span class="text-gray-100">App\Models\User</span><span class="text-gray-400">::</span><span class="text-blue-400">factory</span><span class="text-gray-400">()-&gt;</span><span class="text-blue-400">create</span><span class="text-gray-400">();</span>
+
+    <span class="text-pink-400">visit</span><span class="text-gray-400">(</span><span class="text-blue-400">route</span><span class="text-gray-400">(</span><span class="text-green-400">'login'</span><span class="text-gray-400">))</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'email'</span><span class="text-gray-400">,</span> <span class="text-blue-300">$user</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">email</span><span class="text-gray-400">)</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">type</span><span class="text-gray-400">(</span><span class="text-green-400">'password'</span><span class="text-gray-400">,</span> <span class="text-green-400">'password'</span><span class="text-gray-400">)</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">press</span><span class="text-gray-400">(</span><span class="text-green-400">'Continue'</span><span class="text-gray-400">)</span>
+        <span class="text-gray-400">-&gt;</span><span class="text-blue-400">assertSee</span><span class="text-gray-400">(</span><span class="text-green-400">'Dashboard'</span><span class="text-gray-400">);</span>
+
+    <span class="text-pink-400">$this</span><span class="text-gray-400">-&gt;</span><span class="text-blue-400">assertAuthenticatedAs</span><span class="text-gray-400">(</span><span class="text-blue-300">$user</span><span class="text-gray-400">);</span>
+<span class="text-gray-400">});</span>
+</code>
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-10">
+                                <h3 class="text-sm text-gray-400">Cleaner syntax</h3>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-white">Syntax you can fall in love with</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400">Pest brings a modern, expressive syntax that makes writing tests more enjoyable, more readable, and easier to maintain over time.</p>
                             </div>
                         </div>
-                        <h4 class="lg:text-2xl mt-6 text-xl font-bold">
-                            All-in-one Framework
-                        </h4>
-                        <p class="lg:text-lg mt-3 leading-relaxed text-gray-400">
-                            Stunning error messages ∙ <a class="underline" href="https://pestphp.com/docs/stress-testing">Stress Testing</a> ∙ Beautiful <a class="underline" href="https://pestphp.com/docs/installation">documentation</a> ∙ Colorful console output ∙ API inspired by Ruby's Rspec and Jest ∙ <a class="underline" href="https://pestphp.com/docs/mutation-testing">Mutation Testing</a> ∙ <a class="underline" href="https://pestphp.com/docs/optimizing-tests">--profile</a> for performance analysis ∙ Built-in <a class="underline" href="https://pestphp.com/docs/test-coverage">--coverage</a> reports ∙ Native <a class="underline" href="https://pestphp.com/docs/optimizing-tests">--parallel</a> support ∙ Interactive <a class="underline" href="https://pestphp.com/docs/plugins#watch">--watch</a> mode.
+                    </div>
+                    <div class="flex p-px lg:col-span-2">
+                        <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 lg:rounded-tr-4xl relative">
+                            <div class="relative min-h-90 w-full grow">
+                                <div class="absolute top-6 lg:top-10 right-0 bottom-0 left-6 lg:left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
+<pre class="text-gray-100 text-xs font-mono tracking-tight overflow-x-auto whitespace-pre leading-[19px] pl-4">
+<code>
+<span class="text-red-950 bg-red-500 p-1 font-semibold">FAIL</span> Tests\MathTest
+<div class="flex items-center"><span class="text-red-500 text-lg">×</span> it adds numbers</div>
+<hr class="border-red-500 -mt-1">
+<span class="text-red-950 bg-red-500 p-1 font-semibold">FAILED</span> Tests\MathTest <span class="text-gray-400">&gt;</span> adds numbers
+<div class="font-bold mt-2">Failed asserting that <span class="text-yellow-300">2</span> is identical to <span class="text-yellow-300">3</span>.</div>
+at <span class="text-green-500">tests/MathTest.php:4</span>
+
+     <span class="text-gray-500">1</span>  <span class="text-gray-400">&lt;?php</span>
+     <span class="text-gray-500">2</span>
+     <span class="text-gray-500">3</span>  <span class="text-pink-400">it</span>(<span class="text-green-400">'adds numbers'</span>, <span class="text-blue-400">function</span> () {
+<span class="text-red-500 font-bold text-base">→</span>   <span class="text-gray-500 ml-1">4</span>      <span class="text-blue-300">expect</span>(<span class="text-yellow-300">1</span> + <span class="text-yellow-300">1</span>)-><span class="text-blue-300">toBe</span>(<span class="text-yellow-300">3</span>);
+     <span class="text-gray-500">5</span>  });
+</code>
+</pre>
+                                </div>
+                            </div>
+                            <div class="p-6 lg:p-10">
+                                <h3 class="text-sm text-gray-400">Readable Failures</h3>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-white">Stunning error messages</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400">Understand test failures at a glance with clear, beautifully formatted output.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex p-px lg:col-span-2">
+                        <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 lg:rounded-bl-4xl">
+                            <div class="relative w-full grow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 510 460"><g filter="url(#a)"><path fill="#fff" fill-opacity=".2" d="M256.184 168.201c95.007 0 172.027 38.767 172.027 86.587 0 47.821-77.02 86.587-172.027 86.587-95.009 0-172.0277-38.766-172.0278-86.587 0-47.82 77.0188-86.587 172.0278-86.587Z"/></g><path fill="#fff" d="M139.728 132.806c0-3.323-2.693-6.018-6.016-6.018s-6.018 2.695-6.018 6.018 2.695 6.016 6.018 6.016 6.016-2.693 6.016-6.016Zm-6.004 1.769c.586 0 1.061.475 1.062 1.061 0 .587-.476 1.062-1.062 1.062h-.012c-.586 0-1.062-.475-1.062-1.062 0-.586.476-1.061 1.062-1.061h.012Zm-1.074-1.769v-2.832c0-.587.476-1.062 1.062-1.062.586 0 1.062.475 1.062 1.062v2.832c0 .586-.476 1.061-1.062 1.062-.586 0-1.062-.476-1.062-1.062Zm9.202 0c0 4.496-3.644 8.14-8.14 8.14s-8.141-3.644-8.142-8.14c0-4.496 3.646-8.142 8.142-8.142 4.496 0 8.14 3.646 8.14 8.142Z" opacity=".4"/><path fill="#fff" d="M114.522 125.724c0-.504-.193-1.035-.374-1.274l-1.427-1.597v-.001c-.314-.35-.611-.676-.826-.977-.231-.325-.431-.706-.481-1.182-.05-.476.067-.89.226-1.256.147-.341.37-.724.605-1.133l.699-1.213c.251-.436.485-.845.72-1.16.252-.337.572-.661 1.042-.853.47-.191.926-.182 1.342-.116.388.062.841.192 1.324.329h-.001l1.7.478c.395.085.806.031 1.167-.151l.413-.239c.31-.203.55-.497.683-.845l.457-1.367.217-.639c.072-.202.146-.39.224-.557.167-.36.396-.72.782-.999s.799-.383 1.193-.428c.366-.042.805-.04 1.272-.04h1.58c.467 0 .906-.002 1.272.04.394.045.807.149 1.193.428s.615.639.782.999c.155.334.294.752.441 1.196h-.001l.457 1.367.122.254c.137.237.33.439.56.591l.414.239c.36.183.771.236 1.166.151l1.701-.478c.483-.137.936-.267 1.324-.329.416-.066.872-.075 1.342.116.47.192.79.516 1.042.853.235.315.469.724.72 1.16l.699 1.213c.235.408.458.792.605 1.133.149.344.259.728.231 1.168.002.219-.045.406-.09.534-.059.17-.141.324-.219.453-.154.258-.357.52-.554.755-.377.452-.905 1.005-1.195 1.331-.389.438-1.06.477-1.498.088-.438-.39-.477-1.062-.088-1.5.39-.438.789-.846 1.152-1.281.172-.206.292-.369.361-.484.005-.008.008-.017.012-.024l.002-.006v-.002c0-.001-.001-.008-.004-.02-.005-.025-.018-.078-.058-.169-.088-.203-.238-.465-.497-.916l-.699-1.213c-.277-.481-.441-.759-.582-.949-.064-.085-.104-.126-.125-.144-.009-.008-.014-.011-.015-.012h-.001c-.001 0-.007-.001-.019-.001-.026-.002-.083-.002-.189.014-.233.038-.543.125-1.077.276h-.001l-1.729.486-.023.007-.025.006c-.894.206-1.832.089-2.648-.33l-.024-.011-.021-.014-.478-.275-.022-.012-.02-.013c-.699-.448-1.237-1.109-1.534-1.885l-.009-.021-.006-.022-.473-1.412-.002-.002c-.163-.49-.259-.773-.352-.972-.041-.09-.069-.135-.084-.156-.006-.008-.01-.012-.012-.013l-.003-.004c-.002 0-.007-.001-.017-.005-.024-.008-.076-.021-.174-.033-.218-.025-.515-.026-1.03-.026h-1.58c-.515 0-.813.001-1.03.026-.098.012-.15.025-.174.033-.01.004-.016.005-.017.005l-.002.002v.002c0 .001-.006.003-.013.013-.015.021-.043.066-.085.156-.092.199-.188.482-.351.972l-.002.002-.473 1.412-.006.022-.009.021c-.297.776-.835 1.437-1.535 1.885l-.019.013-.022.012-.478.275-.021.014-.024.011c-.816.419-1.754.536-2.648.33l-.025-.006-.023-.007-1.729-.486h-.001c-.534-.151-.844-.238-1.077-.276-.106-.016-.163-.016-.189-.014l-.019.001h-.001c-.001.001-.006.004-.015.012-.021.018-.061.058-.125.144-.141.19-.305.468-.582.949l-.699 1.213c-.259.451-.409.713-.497.916-.04.091-.053.144-.058.169-.003.012-.004.019-.004.02v.003c.001.002.002.008.007.019.01.024.035.071.093.152.128.181.329.405.677.792l.001.003 1.46 1.631.022.025.02.025c.53.671.839 1.703.84 2.605 0 .903-.31 1.934-.84 2.605l-.02.026-.022.024-1.46 1.632-.001.002c-.348.387-.549.613-.677.793-.058.081-.083.129-.093.153-.004.009-.006.014-.007.016v.005c0 .002.001.008.004.019.005.025.018.077.058.169.088.203.238.465.497.916l.699 1.213c.277.481.441.761.582.95.064.086.104.125.125.143l.015.012h.001v.001c.001 0 .007.001.019.002.026.002.083 0 .189-.017.233-.037.543-.122 1.077-.273h.001l1.729-.488.023-.007.025-.005c.782-.18 1.598-.114 2.336.186l.312.144.024.012.023.013.476.276.022.011.019.014c.612.391 1.101.945 1.412 1.597l.123.286.009.021.006.022.473 1.412.002.003c.159.48.263.782.355.989.034.076.061.12.074.143.009.004.024.013.047.021.061.023.217.069.506.06.586-.018 1.077.443 1.095 1.029.018.586-.443 1.075-1.029 1.093-.542.017-.974-.065-1.312-.191-.167-.062-.303-.131-.412-.197-.096-.058-.176-.117-.187-.126l-.134-.108c-.294-.26-.468-.591-.588-.861-.142-.321-.28-.728-.431-1.181v-.002l-.457-1.366-.121-.255c-.139-.241-.335-.445-.57-.598l-.405-.233c-.366-.185-.784-.237-1.183-.146l-1.686.476-.002-.002c-.482.137-.932.269-1.319.33-.416.066-.872.074-1.342-.118-.47-.191-.79-.515-1.042-.852-.235-.315-.469-.724-.72-1.16l-.699-1.213c-.235-.408-.458-.791-.605-1.132-.159-.366-.276-.779-.226-1.256l.025-.174c.075-.396.254-.723.456-1.007.215-.303.513-.632.828-.982l1.425-1.595c.181-.239.374-.77.374-1.274Z"/><path fill="#fff" d="M120.266 125.643c0-3.361 2.839-5.896 5.923-5.938h.015c.784 0 1.492.109 2.19.38.69.268 1.317.675 1.963 1.201.455.371.523 1.039.153 1.494-.371.454-1.039.522-1.494.152-.542-.442-.977-.707-1.392-.868-.404-.157-.841-.234-1.412-.235-2.01.03-3.823 1.704-3.823 3.814 0 1.215.34 1.93 1.067 2.771.384.444.334 1.115-.109 1.499-.444.383-1.113.334-1.497-.11-1.005-1.163-1.584-2.356-1.584-4.16Z"/><path fill="#fff" d="M117.542 372.22c0-4.2-.002-7.212-.309-9.501-.303-2.248-.877-3.592-1.867-4.582-.99-.99-2.335-1.564-4.584-1.866-2.289-.308-5.299-.312-9.499-.312-4.2006 0-7.2122.004-9.5015.312-2.2487.302-3.5915.876-4.5819 1.866-.9905.991-1.5639 2.333-1.8663 4.582-.3078 2.289-.3114 5.301-.3114 9.501 0 4.2.0036 7.21.3114 9.5.3024 2.249.8757 3.593 1.8663 4.584.9904.99 2.3336 1.564 4.5819 1.866 2.2893.308 5.3009.309 9.5015.309.987 0 1.912 0 2.781-.004.769-.003 1.396.618 1.4 1.387.004.77-.618 1.396-1.387 1.4-.878.005-1.809.005-2.794.005-4.1216 0-7.3536.003-9.8717-.336-2.5579-.344-4.5878-1.062-6.1826-2.656-1.5945-1.595-2.315-3.625-2.659-6.183-.3385-2.518-.3353-5.75-.3353-9.872 0-4.121-.0031-7.353.3353-9.871.344-2.558 1.0642-4.588 2.659-6.183 1.5949-1.595 3.6243-2.315 6.1826-2.659 2.5181-.338 5.7502-.335 9.8717-.335 4.121 0 7.353-.003 9.872.335 2.557.344 4.587 1.065 6.182 2.659 1.594 1.595 2.313 3.625 2.657 6.183.338 2.518.335 5.75.335 9.871 0 .986 0 1.917-.004 2.794-.004.77-.631 1.391-1.4 1.388-.77-.004-1.391-.632-1.388-1.401.005-.869.005-1.794.005-2.781Z"/><path fill="#fff" d="M114.289 377.33c.583 0 1.105.364 1.307.91l.479 1.296c.672 1.818.888 2.312 1.241 2.666.354.353.849.566 2.666 1.239l1.293.479c.547.202.911.725.911 1.309-.001.583-.364 1.104-.911 1.306l-1.293.479c-1.818.673-2.312.888-2.666 1.242-.353.353-.568.847-1.241 2.665l-.479 1.294c-.202.547-.724.91-1.307.91s-1.106-.363-1.309-.91l-.479-1.294c-.672-1.817-.886-2.312-1.239-2.665-.353-.354-.848-.569-2.665-1.242l-1.296-.479c-.547-.202-.91-.723-.91-1.306 0-.584.363-1.107.91-1.309l1.296-.479c1.817-.673 2.312-.886 2.665-1.239.354-.354.567-.849 1.239-2.666l.479-1.296c.203-.547.726-.91 1.309-.91Zm-.002 5.264c-.288.61-.61 1.135-1.054 1.578-.444.444-.968.767-1.579 1.054.611.288 1.135.615 1.579 1.059.443.443.767.967 1.054 1.577.288-.611.615-1.133 1.058-1.577.444-.444.966-.771 1.577-1.059-.61-.287-1.133-.61-1.577-1.054-.443-.443-.77-.967-1.058-1.578Z" opacity=".4"/><path fill="#fff" d="M118.932 366.182v2.787H83.625v-2.787h35.307Z"/><path fill="#fff" d="M92.0049 359.676c.7694 0 1.3938.624 1.3938 1.394 0 .769-.6244 1.393-1.3938 1.393h-.0174c-.7698 0-1.3937-.624-1.3937-1.393 0-.77.6239-1.394 1.3937-1.394h.0174Z" opacity=".4"/><path fill="#fff" d="M99.4385 359.676c.7695 0 1.3935.624 1.3935 1.394 0 .769-.624 1.393-1.3935 1.393h-.0174c-.7698 0-1.3938-.624-1.3938-1.393 0-.77.624-1.394 1.3938-1.394h.0174Z" opacity=".4"/><path fill="#fff" d="M422.057 392.215c.466-.466 1.225-.466 1.691 0l6.371 6.373c.466.466.466 1.223 0 1.689-.467.466-1.223.466-1.689 0l-6.373-6.371c-.467-.466-.467-1.224 0-1.691Z"/><path fill="#fff" d="M402.594 385.094c0-6.817 5.526-12.344 12.344-12.344.659 0 1.194.535 1.194 1.195 0 .659-.535 1.194-1.194 1.194-5.498.001-9.955 4.457-9.955 9.955s4.457 9.956 9.955 9.956 9.956-4.458 9.956-9.956c.001-.66.535-1.195 1.195-1.195.659.001 1.194.536 1.194 1.195 0 6.818-5.528 12.346-12.345 12.346-6.818-.001-12.344-5.529-12.344-12.346Z"/><path fill="#fff" d="M422.106 371.158c.5 0 .947.312 1.12.78l.411 1.111c.576 1.558.761 1.982 1.064 2.285.303.302.727.486 2.284 1.062l1.109.411c.469.173.781.622.781 1.121-.001.5-.312.947-.781 1.12l-1.109.411c-1.558.577-1.981.761-2.284 1.064-.303.303-.488.726-1.064 2.285l-.411 1.109c-.173.468-.62.78-1.12.78-.5 0-.948-.312-1.122-.78l-.41-1.109c-.577-1.558-.76-1.982-1.062-2.285-.303-.303-.727-.487-2.285-1.064l-1.111-.411c-.468-.173-.78-.62-.78-1.12 0-.499.311-.948.78-1.121l1.111-.411c1.558-.576 1.982-.759 2.285-1.062.302-.303.485-.727 1.062-2.285l.41-1.111c.174-.468.622-.78 1.122-.78Zm-.002 4.512c-.246.523-.523.973-.903 1.353s-.83.657-1.353.904c.523.246.972.526 1.353.907.38.38.657.828.903 1.351.247-.523.527-.971.907-1.351.381-.381.828-.661 1.352-.907-.523-.247-.972-.524-1.352-.904-.38-.38-.66-.83-.907-1.353Z" opacity=".4"/><g filter="url(#b)"><path fill="#fff" d="M183.129 239.014c2.124-12.102-5.956-21.965-18.02-21.965H110.48l-3.87 21.965h54.629l-1.29 7.322H105.32l-8.4216 48.104H118.75l4.59-26.176h32.778c12.064 0 23.597-9.864 25.721-21.966l1.29-7.284Zm64.227 7.55h-58.081l-3.415 18.361h58.044l3.452-18.361Zm23.369-29.515h-76.481l-3.869 22.003h76.518l3.832-22.003Zm-90.062 77.391h76.519l3.831-22.003h-76.481l-3.869 22.003Zm119.197-77.391c-11.912 0-23.407 10.053-25.721 22.003l-.645 3.68h.038c-1.479 11.685 6.336 21.624 18.058 21.624h32.778l-1.442 8.081h-54.629l-3.87 22.003h54.629c12.064 0 23.597-9.864 25.722-22.003l1.403-8.081c2.125-12.14-5.956-22.003-18.02-22.003h-32.777l.569-3.301h72.877l-9.712 55.388h21.927l9.712-55.388h21.852c12.064 0 23.596-9.863 25.721-22.003H299.86Z"/></g><path fill="#fff" d="M270.712 154.396c.586.001 1.062.476 1.062 1.062 0 .587-.476 1.062-1.062 1.062h-.013c-.587 0-1.062-.475-1.062-1.062 0-.586.475-1.062 1.062-1.062h.013Zm5.656 0c.587 0 1.062.476 1.062 1.062 0 .587-.475 1.062-1.062 1.062h-.011c-.587 0-1.062-.475-1.062-1.062 0-.586.475-1.062 1.062-1.062h.011Zm5.658 0c.586.001 1.062.476 1.062 1.062 0 .587-.476 1.062-1.062 1.062h-.013c-.587 0-1.062-.475-1.062-1.062 0-.586.475-1.061 1.062-1.062h.013Z" opacity=".4"/><path fill="#fff" d="M286.952 164.561c0-1.536-.041-2.99.221-4.357.273-1.428.868-2.757 2.08-4.154.27-.312.27-.87 0-1.182-1.212-1.397-1.807-2.726-2.08-4.154-.262-1.367-.221-2.821-.221-4.357 0-1.571-1.076-2.579-2.097-2.579-.587 0-1.062-.475-1.062-1.062 0-.586.475-1.062 1.062-1.062 2.467 0 4.221 2.252 4.221 4.703 0 1.645-.031 2.841.182 3.957.202 1.054.629 2.043 1.6 3.162.963 1.11.963 2.856 0 3.966-.971 1.119-1.398 2.108-1.6 3.162-.213 1.116-.182 2.312-.182 3.957 0 2.451-1.754 4.703-4.221 4.703-.587 0-1.062-.476-1.062-1.062 0-.587.475-1.062 1.062-1.062 1.021 0 2.097-1.008 2.097-2.579Z"/><path fill="#fff" d="M263.646 164.561c0-1.645.03-2.841-.184-3.957-.202-1.054-.628-2.043-1.599-3.162-.963-1.11-.963-2.856 0-3.966 1.841-2.122 1.783-3.862 1.783-7.119 0-2.451 1.752-4.702 4.22-4.703.586 0 1.062.476 1.062 1.062 0 .587-.476 1.062-1.062 1.062-1.022 0-2.096 1.008-2.096 2.579 0 3.166.126 5.712-2.303 8.511-.27.312-.27.87 0 1.182 1.212 1.397 1.807 2.726 2.081 4.154.261 1.367.222 2.821.222 4.357 0 1.571 1.074 2.578 2.096 2.579.586 0 1.061.475 1.062 1.062 0 .586-.476 1.062-1.062 1.062-2.468-.001-4.22-2.252-4.22-4.703Z"/><path fill="#fff" d="M64.7894 214.308c0-3.122-.0041-5.34-.2302-7.022-.2215-1.647-.6367-2.597-1.3295-3.29-.6928-.693-1.6417-1.108-3.2883-1.33-1.6824-.226-3.9001-.228-7.0216-.228h-6.5477c-3.1212 0-5.3393.002-7.0216.228-1.6471.222-2.5973.637-3.2902 1.33-.6928.693-1.108 1.643-1.3295 3.29-.2261 1.682-.2283 3.9-.2283 7.022 0 3.121.0021 5.339.2283 7.021.2214 1.647.6369 2.596 1.3295 3.288.6929.693 1.6431 1.109 3.2902 1.33 1.6823.226 3.9004.228 7.0216.228h6.5477c3.1215 0 5.3392-.002 7.0216-.228 1.6469-.221 2.5955-.637 3.2883-1.33l.2474-.272c.5467-.668.8882-1.575 1.0821-3.016.2261-1.682.2302-3.9.2302-7.021Zm2.4556 0c0 3.051.0019 5.464-.2513 7.347-.2581 1.92-.8026 3.474-2.0278 4.699-1.2249 1.225-2.7775 1.769-4.6964 2.028-1.8841.253-4.2975.249-7.3497.249h-6.5477c-3.0522 0-5.4656.004-7.3497-.249-1.9193-.259-3.4732-.803-4.6983-2.028-1.2249-1.225-1.7679-2.779-2.0259-4.699-.2532-1.883-.2513-4.296-.2513-7.347 0-3.053-.002-5.466.2513-7.35.2581-1.919.8008-3.473 2.0259-4.698 1.2251-1.225 2.779-1.768 4.6983-2.026 1.8841-.254 4.2975-.252 7.3497-.252h6.5477c3.0522 0 5.4656-.002 7.3497.252 1.9186.258 3.4715.801 4.6964 2.026 1.2251 1.225 1.7697 2.779 2.0278 4.698.2533 1.884.2513 4.297.2513 7.35Z"/><path fill="#fff" d="M49.6428 231.086c2.5911 0 5.0289.647 7.1329 1.784.5965.323.8193 1.069.4969 1.665-.3226.597-1.0688.818-1.6653.495-1.7486-.945-3.7852-1.488-5.9645-1.488-2.1794 0-4.2159.543-5.9645 1.488-.5963.323-1.3408.101-1.6633-.495s-.0997-1.342.4969-1.665c2.1036-1.137 4.5402-1.784 7.1309-1.784Z"/><path fill="#fff" d="M49.6611 219.627c.6779 0 1.2279.55 1.2279 1.228 0 .678-.55 1.227-1.2279 1.228h-.0153c-.6781 0-1.2278-.55-1.2278-1.228 0-.678.5497-1.228 1.2278-1.228h.0153Z" opacity=".4"/><path fill="#fff" d="M48.418 215.942v-6.548c0-.678.5497-1.228 1.2278-1.228s1.2278.55 1.2278 1.228v6.548c0 .678-.5497 1.227-1.2278 1.227s-1.2278-.549-1.2278-1.227Z" opacity=".4"/><path fill="#fff" d="M441.328 133.047c.453-.525 1.247-.584 1.772-.131l3.501 3.019c.707.609 1.337 1.149 1.775 1.643.454.513.867 1.157.867 1.998 0 .84-.413 1.484-.867 1.997-.438.494-1.068 1.034-1.775 1.643l-3.501 3.019c-.525.453-1.319.394-1.772-.131-.453-.526-.394-1.32.131-1.773l3.501-3.016c.764-.659 1.238-1.07 1.536-1.407.139-.158.198-.255.223-.306.005-.011.009-.019.011-.024v-.005c-.002-.005-.006-.013-.011-.024-.025-.051-.084-.148-.223-.306-.298-.336-.772-.748-1.536-1.407l-3.501-3.016c-.525-.453-.584-1.247-.131-1.773Z" opacity=".4"/><path fill="#fff" d="M433.853 132.916c.526-.453 1.32-.394 1.773.131.453.526.394 1.32-.132 1.773l-3.5 3.016c-.764.659-1.238 1.071-1.536 1.407-.14.158-.199.255-.223.306-.006.011-.01.019-.011.024l-.003.003.003.002c.001.005.005.013.011.024.024.051.083.148.223.306.298.337.772.748 1.536 1.407l3.5 3.016c.526.453.585 1.247.132 1.773-.453.525-1.247.584-1.773.131l-3.5-3.019c-.707-.609-1.337-1.149-1.775-1.643-.397-.449-.764-.999-.849-1.692l-.018-.305.018-.306c.085-.693.452-1.243.849-1.692.438-.494 1.068-1.034 1.775-1.643l3.5-3.019Z" opacity=".4"/><path fill="#fff" d="M444.83 128.163v-9.861c0-1.627.001-2.788-.06-3.703-.059-.904-.174-1.482-.361-1.953-.678-1.713-2.125-3.093-3.998-3.751-1.113-.391-2.556-.41-6.084-.41-6.096 0-8.824.018-10.963.769-3.52 1.237-6.267 3.84-7.56 7.104-.378.954-.589 2.077-.696 3.705-.108 1.641-.109 3.708-.109 6.544v4.845c0 2.951.003 5.054.194 6.678.187 1.593.542 2.571 1.146 3.331.386.486.848.919 1.369 1.286 1.366.963 3.308 1.233 7.464 1.28.694.008 1.25.575 1.242 1.268-.008.694-.575 1.25-1.268 1.242-3.773-.042-6.433-.228-8.484-1.473l-.401-.264c-.714-.502-1.349-1.1-1.887-1.777-1.008-1.268-1.46-2.766-1.676-4.599-.212-1.804-.21-4.082-.21-6.972v-4.845c0-2.803-.001-4.966.114-6.709.116-1.753.353-3.166.867-4.463 1.576-3.976 4.893-7.086 9.063-8.551 2.646-.928 5.911-.909 11.795-.909 3.316 0 5.296-.018 6.916.55 2.522.886 4.542 2.771 5.503 5.195.322.815.462 1.686.53 2.714.067 1.017.067 2.274.067 3.868v9.861c0 .694-.562 1.257-1.255 1.258-.694 0-1.258-.564-1.258-1.258Z"/><path fill="#fff" d="M412.488 126.255c.001-4.196 3.401-7.596 7.596-7.596.349 0 .707.015 1.044.031.345.016.67.031.992.038.653.013 1.191-.018 1.632-.136l.241-.081c.544-.226.957-.694 1.112-1.273.119-.44.15-.979.136-1.632-.006-.322-.021-.646-.037-.992-.016-.337-.032-.694-.032-1.043.001-4.196 3.401-7.596 7.596-7.596.694 0 1.258.561 1.258 1.255 0 .693-.564 1.255-1.258 1.255-2.808.001-5.085 2.277-5.085 5.086 0 .284.013.589.029.927.015.329.032.694.04 1.057.015.719-.009 1.544-.221 2.334-.409 1.527-1.601 2.719-3.128 3.129-.79.211-1.616.235-2.334.22-.363-.007-.728-.025-1.057-.04-.338-.016-.643-.029-.928-.029-2.808.001-5.085 2.277-5.085 5.086 0 .693-.562 1.257-1.255 1.257-.694 0-1.256-.564-1.256-1.257Z"/><path fill="#fff" d="M443.699 291.046c1.183-1.977 3.533-2.598 5.397-1.552.492.276.668.9.392 1.392-.276.492-.9.668-1.392.392-.859-.482-2.003-.249-2.642.818-.582.972-.488 2.269.201 3.115l2.347 2.881c.895 1.1 1.505 1.845 2.016 2.329.504.477.746.533.885.535.105.001.312-.033.737-.39.432-.363 1.076-.307 1.439.125.363.433.307 1.078-.125 1.441-.588.494-1.261.879-2.071.871-.913-.009-1.636-.496-2.272-1.098-.63-.596-1.337-1.468-2.196-2.522l-2.344-2.88c-1.244-1.527-1.386-3.763-.372-5.457Zm17.434-9.196c.923-.847 2.102-1.165 3.225-.967.556.098.927.629.829 1.185-.098.555-.627.927-1.183.829-.499-.087-1.035.042-1.488.458-1.408 1.293-2.7 2.569-3.909 3.843-.388.409-1.035.427-1.444.039-.41-.389-.427-1.037-.039-1.447 1.241-1.308 2.566-2.615 4.009-3.94Z" opacity=".4"/><path fill="#fff" d="M469.275 281.84c1.86-1.67 4.58-1.198 5.958.806l.222.354c1.016 1.815.717 4.205-.843 5.637-4.291 3.94-7.591 6.623-11.039 10.62-.959 1.112-1.741 2.021-2.422 2.638-.678.615-1.439 1.116-2.372 1.107-.918-.009-1.648-.488-2.298-1.09-.643-.596-1.365-1.466-2.243-2.521l-2.397-2.882c-1.272-1.528-1.419-3.772-.38-5.471 1.523-2.49 4.874-2.767 6.726-.496l1.357 1.666c2.848-3.552 5.869-6.897 9.731-10.368Zm4.274 1.964c-.739-1.075-2.043-1.219-2.907-.443h-.002c-3.837 3.448-6.822 6.769-9.664 10.33-.068.086-.143.179-.21.256-.069.078-.175.189-.318.286-.54.368-1.239.374-1.786.011-.144-.095-.249-.205-.319-.283-.068-.076-.143-.168-.212-.252l-1.528-1.877c-.938-1.149-2.591-1.048-3.398.271-.59.966-.495 2.255.207 3.099l2.398 2.88c.915 1.1 1.537 1.847 2.059 2.331.516.477.773.542.931.544.143.001.411-.06.979-.575.565-.513 1.25-1.307 2.246-2.461 3.551-4.116 7.009-6.936 11.205-10.789.877-.805 1.041-2.279.319-3.328Z"/><path fill="#fff" d="M265.492 377.928c0-.8-.001-1.607 0-2.38.003-1.557.84-2.667 1.768-3.46.89-.761 2.039-1.372 2.875-1.86 1.831-1.068 3.287-2.787 3.955-4.832.097-.3.03-.566-.196-.808-.249-.266-.683-.475-1.198-.475-.471 0-.992.205-1.612.642-.628.444-1.203 1.01-1.848 1.605-.237.219-.474.403-.686.538-3.185 2.03-7.391-.384-7.392-4.011 0-3.595 4.126-5.996 7.3-4.066.737.387 1.332.894 1.797 1.405.813.894 1.663 1.433 2.454 1.433.531 0 .98-.216 1.239-.493.238-.253.31-.535.209-.851-1.1-3.436-4.351-5.934-8.199-5.934-.809 0-1.375.114-1.714.213-.169.049-.284.094-.346.122-.024.011-.042.018-.05.022l.006-.002.009-.005c-.456.273-1.034.221-1.435-.128-.401-.35-.531-.918-.322-1.407l3.976-9.275c.382-.947-.314-1.934-1.252-1.934-.503 0-.974.29-1.209.767l-5.346 10.858c-.299.607-1.034.859-1.642.56-.608-.3-.856-1.037-.557-1.645l.705-1.435v-5.906c0-.807-.639-1.428-1.387-1.428s-1.387.621-1.387 1.428v13.274c0 .677-.549 1.226-1.226 1.226-.678 0-1.226-.549-1.226-1.226v-6.194l-.029-.294c-.132-.66-.704-1.134-1.359-1.134-.747 0-1.387.621-1.387 1.428v9.512c0 2.286.524 4.539 1.529 6.581l.542 1.102c.93 1.889 1.413 3.971 1.414 6.081v2.386c-.001.677-.549 1.226-1.226 1.226-.678 0-1.226-.549-1.227-1.226v-2.386c0-1.736-.399-3.447-1.162-4.998l-.54-1.1c-1.172-2.381-1.782-5.006-1.782-7.666v-9.512c0-2.125 1.701-3.883 3.839-3.883.492 0 .958.098 1.388.266v-3.463c0-2.125 1.7-3.883 3.839-3.883 2.139 0 3.839 1.758 3.839 3.883v.924l2.187-4.441c.64-1.301 1.957-2.134 3.41-2.134 2.734 0 4.538 2.798 3.528 5.303l-.011.026-3.038 7.084c.205-.013.421-.022.649-.022 4.933 0 9.116 3.207 10.536 7.642.403 1.26.017 2.451-.756 3.275-.019.021-.043.039-.063.059l.011.011c.763.816 1.142 1.997.736 3.243-.866 2.654-2.735 4.84-5.05 6.191-.978.571-1.844 1.03-2.518 1.605-.634.542-.908 1.034-.91 1.6-.001.771 0 1.569 0 2.376 0 .677-.549 1.226-1.226 1.226-.677 0-1.226-.549-1.226-1.226Zm-1.881-15.041c0 1.717 2.089 2.918 3.619 1.942.077-.049.199-.14.34-.27l.962-.886c.306-.273.635-.547.976-.799-.406-.321-.765-.666-1.067-.998-.31-.34-.684-.652-1.122-.882-.03-.015-.06-.033-.089-.052-1.531-.975-3.619.228-3.619 1.945Z" opacity=".4"/><path fill="#fff" d="M265.496 377.928c0-.801-.001-1.607 0-2.38.003-1.557.84-2.667 1.768-3.46.89-.761 2.039-1.372 2.875-1.86 1.83-1.068 3.288-2.787 3.955-4.832.097-.3.03-.566-.196-.808-.249-.266-.683-.475-1.198-.475-.47 0-.992.205-1.611.642-.629.444-1.204 1.01-1.849 1.605-.237.219-.474.403-.686.538h-.002c-3.185 2.03-7.389-.384-7.389-4.011 0-3.595 4.126-5.996 7.299-4.066.737.387 1.333.894 1.797 1.405.712.782 1.452 1.293 2.156 1.409l.298.024.196-.009c.445-.045.817-.242 1.043-.484.238-.253.31-.535.209-.851-1.1-3.436-4.351-5.934-8.199-5.934-.809 0-1.375.114-1.714.213-.17.05-.286.094-.348.122-.024.011-.04.02-.048.024.001-.001.002-.003.004-.004s.005-.001.007-.003l.004-.002.002-.002c-.455.274-1.036.223-1.437-.126-.401-.35-.531-.918-.322-1.407l3.976-9.275c.382-.947-.314-1.934-1.252-1.934-.503 0-.976.29-1.211.767l-5.344 10.858c-.299.607-1.034.859-1.642.56-.607-.3-.856-1.037-.557-1.645l5.344-10.858c.64-1.301 1.957-2.134 3.41-2.134 2.735 0 4.536 2.798 3.526 5.303l-.009.026-3.038 7.084c.205-.013.421-.022.649-.022 4.933.001 9.116 3.207 10.536 7.642.403 1.26.017 2.451-.756 3.275-.019.021-.043.039-.063.059.004.004.008.007.011.011.763.816 1.142 1.997.736 3.243-.866 2.654-2.735 4.84-5.05 6.191-.978.571-1.844 1.03-2.517 1.605-.635.542-.909 1.034-.911 1.6-.001.771 0 1.57 0 2.376 0 .677-.549 1.226-1.226 1.226-.677 0-1.225-.549-1.226-1.226Zm-1.881-15.041c0 1.717 2.089 2.918 3.619 1.942.078-.049.199-.14.34-.27.524-.484 1.203-1.141 1.938-1.685-.406-.321-.765-.666-1.067-.998-.31-.34-.684-.652-1.122-.882-.03-.015-.06-.034-.089-.052-1.531-.975-3.619.228-3.619 1.945Z"/><defs><filter id="a" width="464.055" height="293.174" x="24.1562" y="108.201" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_1241_451" stdDeviation="30"/></filter><filter id="b" width="341.43" height="81.3906" x="96.8984" y="217.049" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1241_451"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_1241_451" result="shape"/></filter></defs></svg>
+                            </div>
+                            <div class="p-6 lg:p-10">
+                                <h3 class="text-sm text-gray-400">All-in-one Framework</h3>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-white">Everything you need to test your app</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400">All the testing features you need, built into one elegant framework.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex p-px lg:col-span-4">
+                        <div class="w-full overflow-hidden rounded-lg bg-white/10 outline outline-offset-10 outline-white/10 max-lg:rounded-b-4xl lg:rounded-br-4xl">
+                            <div
+                                x-data="{ x: 50, dragging: false }"
+                                x-init="() => {
+                                    const handleWidth = 40;
+                                    const update = (e) => {
+                                        if (dragging) {
+                                            const rect = $el.getBoundingClientRect();
+                                            x = Math.min(100, Math.max(7, (((e.clientX - rect.left) - (handleWidth / 2)) / rect.width) * 100));
+                                        }
+                                    };
+                                    window.addEventListener('mousemove', update);
+                                    window.addEventListener('mouseup', () => dragging = false);
+                                }"
+                                class="relative w-full grow h-85 overflow-hidden select-none"
+                            >
+                                <div class="absolute top-6 lg:top-10 bottom-0 z-10 w-1 bg-pink-400" :style="{ left: `${x}%`, transform: 'translateX(-50%)' }"></div>
+                                <div
+                                    :style="{ left: `${x}%` }"
+                                    @mousedown.prevent="dragging = true"
+                                    class="absolute z-20 flex size-10 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-pink-500 top-1/2 mt-5"
+                                    title="Drag to understand the browser testing"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="size-5.5"><path fill="currentColor" fill-rule="evenodd" d="M1 12c0-.5523.44772-1 1-1h20c.5523 0 1 .4477 1 1s-.4477 1-1 1H2c-.55228 0-1-.4477-1-1Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M5.70709 8.29288c.39053.39052.39055 1.02368.00003 1.41421L3.41421 12.0001l2.29288 2.2928c.39053.3905.39055 1.0237.00003 1.4142-.39051.3905-1.02368.3905-1.41421 0l-3-2.9999A.99982.99982 0 0 1 1 12.0001c0-.2652.10535-.5195.29288-.7071l3-3.00009c.39052-.39053 1.02368-.39055 1.41421-.00003Z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M18.2929 8.29288c.3905-.39052 1.0237-.3905 1.4142.00003l3 3.00009a.99993.99993 0 0 1 0 1.4142l-3 2.9999c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l2.2929-2.2928-2.2929-2.29301c-.3905-.39053-.3905-1.02369 0-1.41421Z" clip-rule="evenodd"/></svg>
+                                    <div class="absolute inset-1 rounded-full bg-pink-500 animate-ping"></div>
+                                </div>
+
+                                <div class="relative mt-6 lg:mt-10 ml-6 lg:ml-10 h-full w-full overflow-hidden rounded-t-xl bg-gray-950/10 outline outline-gray-950/10">
+                                    <img src="/www/assets/after.png" class="absolute inset-0 h-full max-w-none lg:w-full lg:h-auto pointer-events-none">
+                                    <img src="/www/assets/before.png" class="absolute inset-0 h-full max-w-none lg:w-full lg:h-auto pointer-events-none" :style="`clip-path: inset(0 calc(${100 - x}% + 40px) 0 0)`">
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-10">
+                                <h3 class="text-sm text-gray-400">Modern Browser Testing</h3>
+                                <p class="mt-2 text-lg font-medium tracking-tight text-white">Run Browser Tests with Pest</p>
+                                <p class="mt-2 max-w-lg text-sm/6 text-gray-400">Write end-to-end browser tests in Pest using Playwright, with no separate test suite required. Enjoy a unified, modern testing experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 lg:mt-24">
+                    <blockquote class="mx-auto max-w-4xl">
+                        <p class="text-center text-3xl font-semibold text-white sm:text-4xl">
+                            <span class="text-gray-500">"</span>Pest is minimal, <span class="text-pink-500">distraction-free</span>,<br> and a joy to use.<span class="text-gray-500">"</span>
                         </p>
-                    </li>
-                    <li class="md:w-1/2 md:mt-0 mt-12">
-                        <div class="border-gray-700/50 md:w-40 md:h-40 flex items-center justify-center w-32 h-32 p-6 mx-auto border rounded-full">
-                            <div class="from-gray-500 to-black bg-gradient-to-br md:w-32 md:h-32 container flex items-center justify-center w-24 h-24 max-w-3xl rotate-45 rounded-full select-none" style="padding:1px">
-                                <figure class="md:w-32 md:h-32 flex items-center justify-center w-24 h-24 bg-black rounded-full">
-                                    <svg viewBox="0 0 24 24" fill="none" class="stroke-green w-12 h-12 -rotate-45">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                                    </svg>
-                                </figure>
+
+                        <div class="mt-8 flex items-center justify-center gap-4">
+                            <img class="w-[73px] shrink-0 rounded-full" src="https://pbs.twimg.com/profile_images/1920119168323751936/PRsMibB8_400x400.jpg">
+                            <div>
+                                <cite class="font-medium not-italic text-white">Taylor Otwell</cite>
+                                <p class="text-sm text-gray-400">Creator of Laravel</p>
                             </div>
                         </div>
-                        <h4 class="lg:text-2xl mt-6 text-xl font-bold">
-                            Productive Testing
-                        </h4>
-
-                        <p class="lg:text-lg mt-3 leading-relaxed text-gray-400">
-                            Repeat tests with different data with <a class="underline" href="https://pestphp.com/docs/datasets">datasets</a> ∙ <a class="underline" href="https://pestphp.com/docs/migrating-from-phpunit-guide">--drift</a> your PHPUnit test suite in seconds ∙ Dozens of <a class="underline" href="https://github.com/pestphp/awesome-pest">community-developed plugins</a> ∙ Built-in <a class="underline" href="https://pestphp.com/docs/type-coverage">--type-coverage</a> ∙ Mocking with <a class="underline" href="https://pestphp.com/docs/mocking">Mockery</a> ∙ <a class="underline" href="https://pestphp.com/docs/arch-testing">Architectural Testing</a> ∙ <a class="underline" href="https://pestphp.com/docs/snapshot-testing">Snapshot Testing</a> ∙ <a class="underline" href="https://pestphp.com/docs/team-management">Team Management</a> ∙ <a class="underline" href="https://pestphp.com/docs/skipping-tests">--todos</a>, <a class="underline" href="https://pestphp.com/docs/filtering-tests">--retry</a>, and much more.
-                    </li>
-                </ul>
-
-                <p class="md:text-2xl mt-16 text-xl font-bold text-center">
-                    Syntax you can fall in love with.
-                </p>
-                <div class="md:px-0 px-6">
-                    <div class="from-gray-700 via-black to-black bg-gradient-to-bl flex items-center justify-center mb-6 rounded-[0.55rem] select-none mt-6 container max-w-3xl" style="padding:1px">
-                        <pre class="md:pb-9 md:px-12 md:pt-8 w-full px-6 pt-5 pb-6 overflow-x-auto leading-8 text-left bg-black rounded-lg"><span class="text-gray-400">&lt;?php</span>
-
-<span class="text-pink">it</span>(<span class="text-green">'has a welcome page'</span>, <span class="text-cyan">function</span> () {
-    $response = <span class="text-pink">$this</span><span class="text-gray-400">-></span><span class="text-cyan">get</span>(<span class="text-green">'/'</span>);
-
-    <span class="text-cyan">expect</span>($response<span class="text-gray-400">-></span><span class="text-cyan">status</span>())<span class="text-gray-400">-></span><span class="text-cyan">toBe</span>(<span class="text-pink">200</span>);
-});</pre></div>
+                    </blockquote>
                 </div>
             </section>
 
-            <section class="md:py-12 md:px-0 md:space-y-24 container max-w-4xl px-6 py-6 space-y-12 text-center">
-                <h4 class="md:text-3xl text-2xl font-bold text-center">What they say…</h4>
-
-                <blockquote class="sm:text-3xl md:text-6xl text-2xl font-semibold text-center">
-                    <p>“Pest is minimal, <br><b class="text-pink">distraction-free</b>, and <br>a joy to use.”</p>
-                    <footer class="md:mt-9 md:text-lg mt-6 text-base">
-                        <b class="inline-flex items-center"><span>Taylor Otwell</span> <svg viewBox="0 0 24 24" class="fill-white w-4 h-4 ml-1"><path d="M23.334 11.96c-.713-.726-.872-1.829-.393-2.727.342-.64.366-1.401.064-2.062-.301-.66-.893-1.142-1.601-1.302-.991-.225-1.722-1.067-1.803-2.081-.059-.723-.451-1.378-1.062-1.77-.609-.393-1.367-.478-2.05-.229-.956.347-2.026.032-2.642-.776-.44-.576-1.124-.915-1.85-.915-.725 0-1.409.339-1.849.915-.613.809-1.683 1.124-2.639.777-.682-.248-1.44-.163-2.05.229-.61.392-1.003 1.047-1.061 1.77-.082 1.014-.812 1.857-1.803 2.081-.708.16-1.3.642-1.601 1.302s-.277 1.422.065 2.061c.479.897.32 2.001-.392 2.727-.509.517-.747 1.242-.644 1.96s.536 1.347 1.17 1.7c.888.495 1.352 1.51 1.144 2.505-.147.71.044 1.448.519 1.996.476.549 1.18.844 1.902.798 1.016-.063 1.953.54 2.317 1.489.259.678.82 1.195 1.517 1.399.695.204 1.447.072 2.031-.357.819-.603 1.936-.603 2.754 0 .584.43 1.336.562 2.031.357.697-.204 1.258-.722 1.518-1.399.363-.949 1.301-1.553 2.316-1.489.724.046 1.427-.249 1.902-.798.475-.548.667-1.286.519-1.996-.207-.995.256-2.01 1.145-2.505.633-.354 1.065-.982 1.169-1.7s-.135-1.443-.643-1.96zm-12.584 5.43l-4.5-4.364 1.857-1.857 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.642z"/></svg></b> &middot; <span class="text-pink">Creator of <a href="https://laravel.com?ref=pestphp" target="_blank" class="hover:underline">Laravel</a></span>
-                    </footer>
-                </blockquote>
-
-                <blockquote class="sm:text-2xl md:text-4xl text-xl font-semibold text-center">
-                    <p>“It took me a year to finally give Pest <br>a try… and ten minutes to make the switch. <br><b class="md:text-6xl text-green">Pest is the way.</b><span class="md:text-6xl">”</span></p>
-                    <footer class="md:text-lg mt-6 text-base">
-                        <b class="inline-flex items-center"><span>Jeffrey Way</span></b> &middot; <span class="text-green"><a href="https://laracasts.com?ref=pestphp" target="_blank" class="hover:underline">Laracasts</a> Owner</span>
-                    </footer>
-                </blockquote>
-
-                <blockquote class="sm:text-3xl md:text-5xl text-2xl font-semibold text-center">
-                    <p>“I wouldn't be surprised <br>if Pest becomes the <br><b class="text-cyan">default test runner in PHP</b> <br>in the near future.”</p>
-                    <footer class="md:text-lg mt-6 text-base">
-                        Freek Van der Herten &middot; <span class="text-cyan">Developer at <a href="https://spatie.be?ref=pestphp" target="_blank" class="hover:underline">Spatie</a></span>
-                    </footer>
-                </blockquote>
-
-                <blockquote class="md:text-4xl sm:text-3xl text-2xl font-semibold text-center">
-                    <p>“Testing becomes an <br><b class="text-pink">addiction</b> in every project.”</p>
-                    <footer class="md:text-lg md:mt-6 mt-3 text-base">
-                        Caneco &middot; <span class="text-pink">Full-Stack Developer at <a href="https://medicare.pt?ref=pestphp" target="_blank" class="hover:underline">Medicare</a></span>
-                    </footer>
-                </blockquote>
-            </section>
-
-            <section class="md:pt-12 md:px-0 container max-w-3xl px-6">
-                <h4 class="md:text-5xl text-3xl font-bold text-center">FAQs</h4>
-                <div class="from-gray-700 via-black to-black bg-gradient-to-bl flex items-center justify-center rounded-[0.55rem] select-none container max-w-3xl mt-12" style="padding:1px">
-                    <ul class="md:p-12 md:text-left p-6 mx-auto space-y-12 text-center bg-black rounded-lg">
-                        <li>
-                            <h5 class="text-2xl font-bold">How does Pest differ from PHPUnit?</h5>
-                            <p class="mt-3 md:mt-1.5 text-gray-200"><b class="text-green">Pest is built on top of PHPUnit</b>, but it spices things
-                                up with some neat features you might dig. With Pest, you have access to a user-friendly API that is inspired by Ruby's Rspec and Jest libraries, making it easy to
-                                write elegant tests quickly. Additionally, Pest's console output is truly stunning and makes it effortless to spot any issues that arise. But the benefits don't end
-                                there - Pest also includes features such as built-in parallel testing, coverage, watch mode, architecture testing, native profiling tools, snapshot testing, and the
-                                most beautiful documentation in the world.
-                            </p>
-                            <hr class="from-transparent md:from-white/50 via-white/25 md:via-transparent to-transparent bg-gradient-to-r h-[2px] rounded border-0 mt-6">
-                        </li>
-                        <li>
-                            <h5 class="text-2xl font-bold">Do I need to rewrite all my PHPUnit tests for Pest?</h5>
-                            <p class="mt-3 md:mt-1.5 text-gray-200"><b class="text-green">No need to rewrite your PHPUnit tests for Pest.</b> Pest is
-                            designed to be progressive. You can start using Pest's features immediately after installation. However, if you want to migrate
-                        to Pest's intuitive API, community-developed migration tools are available that can do the job in as little as 3 seconds.</p>
-                            <hr class="from-transparent md:from-white/50 via-white/25 md:via-transparent to-transparent bg-gradient-to-r h-[2px] rounded border-0 mt-6">
-                        </li>
-                        <li>
-                            <h5 class="text-2xl font-bold">Is everything on Pest free?</h5>
-                            <p class="mt-1.5 text-gray-200"><b class="text-green">Yes</b>, Pest is an open-source testing framework,
-                            and all of its features and functionalities are available for free. Pest is released under
-                            the <a href="https://opensource.org/licenses/MIT" class="decoration-gray-600 hover:decoration-white decoration-2 underline">MIT license</a>, which means
-                            you can use it, even in commercial projects. Additionally, Pest's extensive documentation, editor integrations, and
-                            community-developed plugins are also available for free.</p>
-                            <hr class="from-transparent md:from-white/50 via-white/25 md:via-transparent to-transparent bg-gradient-to-r h-[2px] rounded border-0 mt-6">
-                        </li>
-                        <li>
-                            <h5 class="text-2xl font-bold">Who maintains Pest?</h5>
-                            <p class="mt-3 md:mt-1.5 text-gray-200"><b class="text-green">Pest has a team of more than a dozen maintainers</b> who
-                            are committed to developing and enhancing the framework. The team is spread across different regions and
-                            countries, making it a diverse and inclusive community.</p>
-                        </li>
-                    </ul>
+            <section class="pt-16 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 overflow-hidden">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-xs md:text-base uppercase font-thin font-mono tracking-widest text-white/40">All about Pest</p>
+                    <h2 class="text-center mx-auto mt-2 max-w-2xl text-4xl tracking-tight text-balance text-white sm:text-5xl font-title">Frequently asked questions</h2>
+                    <p class="mt-6 text-base/7 text-gray-400">Get quick answers to the most common questions about Pest. Learn how it compares to PHPUnit, how to migrate your existing tests, what features are included, and who’s behind the project — all in one place.</p>
+                </div>
+                <div class="mt-20">
+                    <dl class="space-y-16 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-6 sm:gap-y-16 lg:gap-x-10">
+                        <div>
+                            <dt class="text-base/7 font-semibold text-white">Is everything on Pest free?</dt>
+                            <dd class="mt-2 text-base/7 text-gray-400"><span class="text-sky-300 font-medium">Yes</span>, Pest is an open-source testing framework, and all of its features and functionalities are available for free. Pest is released under the <a href="https://opensource.org/licenses/MIT" target="_blank" class="decoration-gray-400 hover:no-underline underline-offset-4 underline">MIT license</a>, which means you can use it, even in commercial projects. Additionally, Pest's extensive documentation, editor integrations, and community-developed plugins are also available for free.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-base/7 font-semibold text-white">Who maintains Pest?</dt>
+                            <dd class="mt-2 text-base/7 text-gray-400"><span class="text-sky-300 font-medium">Pest has a team of more than a dozen maintainers</span> who are committed to developing and enhancing the framework. The team is spread across different regions and countries, making it a diverse and inclusive community.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-base/7 font-semibold text-white">How does Pest differ from PHPUnit?</dt>
+                            <dd class="mt-2 text-base/7 text-gray-400"><span class="text-sky-300 font-medium">Pest is built on top of PHPUnit</span>, but it spices things up with some neat features you might dig. With Pest, you have access to a user-friendly API that is inspired by Ruby's Rspec and Jest libraries, making it easy to write elegant tests quickly. Additionally, Pest's console output is truly stunning and makes it effortless to spot any issues that arise. But the benefits don't end there - Pest also includes features such as built-in parallel testing, coverage, watch mode, architecture testing, native profiling tools, snapshot testing, and the most beautiful documentation in the world.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-base/7 font-semibold text-white">Do I need to rewrite all my PHPUnit tests for Pest?</dt>
+                            <dd class="mt-2 text-base/7 text-gray-400"><span class="text-sky-300 font-medium">No need to rewrite your PHPUnit tests for Pest.</span> Pest is designed to be progressive. You can start using Pest's features immediately after installation. However, if you want to migrate to Pest's intuitive API, community-developed migration tools are available that can do the job in as little as 3 seconds.</dd>
+                        </div>
+                    </dl>
                 </div>
             </section>
-
-            <footer class="md:px-0 p-12">
-                <small class="text-white/75 md:text-xs block text-sm text-center">&copy; <span x-data x-text="(new Date()).getFullYear()">2023</span> Pest</small>
-            </footer>
-
         </main>
+
+        <footer class="relative pt-0 mt-24">
+            <div class="absolute inset-x-0 top-0 z-0">
+                <div class="border-t border-white/10"></div>
+                <div class="mt-2 border-t border-white/10"></div>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+                <div class="flex justify-center gap-x-8 md:order-2">
+                    <a href="https://x.com/enunomaduro" target="_blank" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">X</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6" fill="none"><path d="M8 3H3L10.5484 13.4516L16 21H21L13.4516 10.5484L8 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path opacity="0.4" d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    <a href="https://github.com/pestphp/pest" target="_blank" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">GitHub</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6" fill="none"><path opacity="0.4" d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@nunomaduro" target="_blank" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">YouTube</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6.5" fill="none"><path d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z" stroke="currentColor" stroke-width="1.5"></path><path opacity="0.4" d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+                    </a>
+                </div>
+                <p class="mt-8 text-center text-sm/6 text-gray-400 md:order-1 md:mt-0">&copy; 2025 PestPHP – A project by <a href="https://pinkary.com/@nunomaduro" target="_blank" class="underline underline-offset-4 hover:no-underline">Nuno Maduro</a>.<br class="sm:hidden"> Designed by <a href="https://nunoguerra.com/?ref=pestphp" target="_blank" class="underline underline-offset-4 hover:no-underline">Nuno Guerra</a>.</p>
+            </div>
+        </footer>
 
         
         <script src="https://cdn.usefathom.com/script.js" data-site="NYURIQIN" defer></script>
