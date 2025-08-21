@@ -71,8 +71,7 @@ pre code.torchlight::-webkit-scrollbar{height:.25rem}
 pre code.torchlight::-webkit-scrollbar-track{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity))}
 pre code.torchlight::-webkit-scrollbar-thumb{border-radius:.25rem;--tw-bg-opacity:1;background-color:rgb(113 113 122 / var(--tw-bg-opacity))}
 pre code.torchlight::-webkit-scrollbar-thumb:hover{--tw-bg-opacity:1;background-color:rgb(161 161 170 / var(--tw-bg-opacity))}
-pre code.torchlight .line:before{content:"  "}
-pre code.torchlight .line:after{content:"  "}
+pre code.torchlight .line:before, pre code.torchlight .line:after, code:after, code:before{content:""}
 pre code.torchlight .line-number,pre code.torchlight .summary-caret{margin-right:1rem}
 pre code.torchlight .line-number{display:none}
 
