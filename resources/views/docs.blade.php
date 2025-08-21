@@ -1,14 +1,15 @@
-<x-app-layout layout="app"  :title="$matter['title']" :description="$matter['description']">
-
-    <main role="main" class="flex-auto w-full">
+<x-app-layout layout="app" :title="$matter['title']" :description="$matter['description']">
+    <main role="main" class="flex-auto overflow-hidden w-full">
         <section class="documentation">
-            <div class="max-w-6xl md:px-6 lg:flex lg:flex-row px-4 mx-auto">
+            <div class="max-w-7xl sm:px-6 lg:flex lg:px-8 mx-auto">
                 <x-docs.sidebar>{!! $index !!}</x-docs.sidebar>
-                <div class="docs-main max-w-prose DocSearch-content mx-auto lg:mr-0 relative w-full px-3 lg:px-0 mt-6 mb-20">
-                    <div class="w-100 lg:block absolute top-0 right-0 hidden h-8 mt-2 text-sm">
+                <div class="mx-auto">
+                    <div class="lg:block hidden text-sm">
                         <a href="https://github.com/pestphp/docs/edit/master/{{ $page }}.md">Edit this page →</a>
                     </div>
-                    {!! $body !!}
+                    <div class="docs-main max-w-prose prose prose-invert DocSearch-content mx-auto relative w-full px-3 lg:px-0 mt-6 mb-20">
+                        {!! $body !!}
+                    </div>
                 </div>
                 <x-docs.sponsors />
             </div>

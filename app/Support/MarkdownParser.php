@@ -31,7 +31,7 @@ class MarkdownParser
     {
         $environment = Environment::createCommonMarkEnvironment([
             'heading_permalink' => [
-                'html_class' => 'heading-permalink mr-2',
+                'html_class' => 'heading-permalink text-white! mr-2',
                 'symbol' => '#',
             ],
         ]);

@@ -1,27 +1,4 @@
-
-<style>
-    #scrollToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30vw;
-      z-index: 99;
-      background-color: #303030;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      font-size: 20px;
-      transition: all 0.3s ease; /* Adicionando transição para suavizar o movimento */
-    }
-
-    #scrollToTopBtn:active {
-      transform: translateY(5px); /* Mover para baixo quando clicado */
-    }
-</style>
-<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">↑</button>
+<button onclick="scrollToTop()" id="scrollToTopBtn" class="fixed bottom-10 right-10 z-50 backdrop-blur-sm bg-white/20 hover:bg-white/40 rounded-full size-10 text-xl" title="Go to top">↑</button>
 
 <script>    
     window.scrollFunction = f => {

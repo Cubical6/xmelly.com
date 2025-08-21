@@ -102,14 +102,14 @@
             </div>
         </div>
 
-        <header class="mx-auto max-w-7xl sm:px-6 lg:px-8 py-8">
+        <header class="mx-auto max-w-7xl px-6 lg:px-8 py-8">
             <div class="absolute inset-x-0 top-8 z-0">
                 <div class="border-t border-white/10"></div>
                 <div class="mt-2 border-t border-white/10"></div>
             </div>
 
             <div class="motion-preset-focus motion-duration-2000">
-                <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+                <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between py-6">
                     <div class="flex items-center gap-4">
                         <a aria-label="Home" href="/" class="-m-1.5 p-1.5 shrink-0">
                             <span class="sr-only">Pest | The elegant PHP testing framework</span>
@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="flex lg:hidden">
-                        <button @click="mobileMenuIsOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 uppercase text-xs">Menu</button>
+                        <button @click="mobileMenuIsOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 uppercase text-sm">Menu</button>
                     </div>
 
                     <div class="hidden lg:flex lg:gap-x-8 items-center">
@@ -134,7 +134,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="-ml-1.5 size-5" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2ZM4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11Z" fill="currentColor"></path></svg>
                                 <div class="truncate min-w-0">Search...</div>
                             </div>
-                            <span class="flex-none text-xs font-semibold">⌘<!-- -->K</span>
+                            <span class="flex-none text-xs font-semibold">⌘K</span>
                         </a>
 
                         <div class="lg:flex lg:gap-x-5">
@@ -166,11 +166,11 @@
                             </a>
                         </div>
 
-                        <a href="https://github.com/pestphp/pest" target="_blank" class="isolate inline-flex rounded-md group">
-                            <div class="relative inline-flex items-center gap-x-1.5 rounded-l-full bg-white/10 px-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10">
+                        <a href="https://github.com/pestphp/pest" target="_blank" class="isolate inline-flex group rounded-3xl">
+                            <div class="relative inline-flex items-center gap-x-1.5 rounded-l-full bg-white/10 px-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10 border-y-1 border-l-1 border-white/5">
                                 <svg class="size-5" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16c0 7.08 4.58 13.06 10.94 15.18.8.14 1.1-.34 1.1-.76 0-.38-.02-1.64-.02-2.98-4.02.74-5.06-.98-5.38-1.88-.18-.46-.96-1.88-1.64-2.26-.56-.3-1.36-1.04-.02-1.06 1.26-.02 2.16 1.16 2.46 1.64 1.44 2.42 3.74 1.74 4.66 1.32.14-1.04.56-1.74 1.02-2.14-3.56-.4-7.28-1.78-7.28-7.9 0-1.74.62-3.18 1.64-4.3-.16-.4-.72-2.04.16-4.24 0 0 1.34-.42 4.4 1.64 1.28-.36 2.64-.54 4-.54 1.36 0 2.72.18 4 .54 3.06-2.08 4.4-1.64 4.4-1.64.88 2.2.32 3.84.16 4.24 1.02 1.12 1.64 2.54 1.64 4.3 0 6.14-3.74 7.5-7.3 7.9.58.5 1.08 1.46 1.08 2.96 0 2.14-.02 3.86-.02 4.4 0 .42.3.92 1.1.76A16.026 16.026 0 0 0 32 16c0-8.84-7.16-16-16-16Z" fill="currentColor"></path></svg>
                             </div>
-                            <span class="relative ml-px inline-flex items-center rounded-r-full bg-white/10 px-2.5 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10">+10k</span>
+                            <span class="relative ml-px inline-flex items-center rounded-r-full bg-white/10 pr-2.5 pl-2 py-1.5 text-sm font-semibold text-white group-hover:bg-white/15 focus:z-10 border-y-1 border-r-1 border-white/5">+10k</span>
                         </a>
                     </div>
                 </nav>
@@ -473,7 +473,7 @@ at <span class="text-green-500">tests/MathTest.php:4</span>
             </section>
         </main>
 
-        <footer class="relative pt-0 mt-24">
+        <footer class="relative mt-24">
             <div class="absolute inset-x-0 top-0 z-0">
                 <div class="border-t border-white/10"></div>
                 <div class="mt-2 border-t border-white/10"></div>

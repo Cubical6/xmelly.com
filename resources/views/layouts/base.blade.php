@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="antialiased font-sans min-h-screen h-full">
 
 <head>
     <title>{{ $title = empty($title) ? config('site.title') : "{$title} | ".config('site.title') }}</title>
@@ -38,21 +38,13 @@
 
     {{ $head ?? '' }}
 
-    @vite(['resources/css/app.scss', 'resources/js/app.js'])
-    <script>
-        // if (!('theme' in localStorage)) {
-        //    localStorage.theme = 'dark';
-        //}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        localStorage.theme = 'dark';
-
-        document.documentElement.classList[localStorage.theme === 'dark' ? 'add' : 'remove']('dark');
-    </script>
     @stack('styles')
-
 </head>
 
 <body {{ $attributes->except(['title', 'description']) }}>
+    {{--
     <div class="w-full py-3 text-center text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700">
         <p class="mt-0 mb-0">
             🚀 <span class="font-semibold">You’re viewing the documentation for the upcoming
@@ -63,6 +55,7 @@
             <a href="/docs/pest-v4-is-here-now-with-browser-testing" class="underline">learn what’s new in Pest 4</a>.
         </p>
     </div>
+    --}}
 
 
     {{ $slot }}
