@@ -66,7 +66,7 @@ pre .copyBtn{position:absolute;display:flex;right:8px;top:10px;height:1.5rem;wid
 pre .copyBtn:active,pre .copyBtn:focus,pre .copyBtn:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
 pre code{display:flex;flex:1 1 0%;border-radius:.5rem;--tw-text-opacity:1!important;color:rgb(255 255 255 / var(--tw-text-opacity))!important}
 pre code{font-size:.9em;line-height:2;font-family:Menlo,ui-monospace,SFMono-Regular,Monaco,Consolas,Liberation Mono,Courier New,monospace}
-pre code.torchlight{display:block;overflow-x:auto;padding-top:1rem;padding-bottom:1rem;padding-right:1rem}
+pre code.torchlight{display:block;overflow-x:auto;padding-top:1rem;padding-bottom:1rem;padding-right:1rem;background:transparent !important;}
 pre code.torchlight::-webkit-scrollbar{height:.25rem}
 pre code.torchlight::-webkit-scrollbar-track{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity))}
 pre code.torchlight::-webkit-scrollbar-thumb{border-radius:.25rem;--tw-bg-opacity:1;background-color:rgb(113 113 122 / var(--tw-bg-opacity))}
