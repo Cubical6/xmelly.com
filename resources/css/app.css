@@ -16,7 +16,8 @@ button { @apply cursor-pointer; }
 .scrollbar::-webkit-scrollbar-thumb:hover { @apply bg-gray-600; }
 
 .bg-pest{background-image:url('../img/bg-pest-4.jpg')}
-.beam-background{animation:animate-beams 100s linear infinite;background-image:linear-gradient(120deg,rgba(34,102,200,.5),rgba(255,255,255,.1));background-image:repeating-linear-gradient(120deg,#1f2937 0,#1f2937 8%,rgba(131,141,155,.1) 4%,transparent 1%,rgba(2,72,172,.6) 5%,#1f2937 12%),repeating-linear-gradient(-60deg,#d1d5db 0,#d1d5db 80%,rgba(209,213,219,.7) 2%,#9ca3af 3%,#9ca3af 4.5%,rgba(209,213,219,.5) 5%);background-size:300%,200%;background-position:50% 80%,5% 50%}
+.beam-background{background-image:linear-gradient(120deg,rgba(34,102,200,.5),rgba(255,255,255,.1));background-image:repeating-linear-gradient(120deg,#1f2937 0,#1f2937 8%,rgba(131,141,155,.1) 4%,transparent 1%,rgba(2,72,172,.6) 5%,#1f2937 12%),repeating-linear-gradient(-60deg,#d1d5db 0,#d1d5db 80%,rgba(209,213,219,.7) 2%,#9ca3af 3%,#9ca3af 4.5%,rgba(209,213,219,.5) 5%);background-size:300%,200%;background-position:50% 80%,5% 50%}
+.beam-animation{animation:animate-beams 100s linear infinite;}
 
 @keyframes animate-beams {
     0% {
