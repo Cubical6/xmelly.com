@@ -30,6 +30,11 @@
                         </a>
                     </li>
                     <li class="block">
+                        <a href="https://nativephp.com/?ref=pestphp.com" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/native-php.svg" class="w-auto h-12" />
+                        </a>
+                    </li>
+                    <li class="block">
                         <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-12" />
                         </a>
@@ -39,11 +44,6 @@
                             <img src="/www/assets/sponsors/cmsmax.png" class="w-auto h-10" />
                         </a>
                     </li>
-                    <li class="block">
-                        <a href="https://nativephp.com/mobile?ref=pestphp.com" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/native-php.svg" class="w-auto h-12" />
-                        </a>
-                    </li>
                 </ul>
                 <ul class="pb-8 border-b border-white/10 drop-shadow md:gap-3 lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
@@ -51,9 +51,10 @@
                             <img src="/www/assets/sponsors/forge.svg" class="w-auto h-5" />
                         </a>
                     </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                        <a href="https://spatie.be/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/spatie.svg" class="w-auto h-7" />
+                    <li class="md:block hidden w-full h-0 -mt-8"></li>
+                    <li class="block">
+                        <a href="https://zapiet.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/zapiet.svg" class="w-auto h-8" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
@@ -64,14 +65,14 @@
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
-                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-4" />
+                        <a href="https://loadforge.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/loadforge.svg" class="w-auto h-5" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
-                        <a href="https://loadforge.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/loadforge.svg" class="w-auto h-5" />
+                        <a href="https://docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/docuwriter-ai.svg" class="w-auto h-10" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
@@ -82,26 +83,26 @@
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
-                        <a href="https://zapiet.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/zapiet.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/docuwriter-ai.svg" class="w-auto h-8" />
+                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-4" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
                         <a href="https://getnerdify.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/nerdify.png" class="w-auto h-12" />
+                            <img src="/www/assets/sponsors/nerdify.png" class="w-auto h-14" />
                         </a>
                     </li>
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
                     <li class="block">
                         <a href="https://akaunting.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
                             <img src="/www/assets/sponsors/akaunting.svg" class="w-auto h-5" />
+                        </a>
+                    </li>
+                    <li class="md:block hidden w-full h-0 -mt-12"></li>
+                    <li class="block">
+                        <a href="https://lambdatest.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/lambdatest.svg" class="w-auto h-8" />
                         </a>
                     </li>
                 </ul>
