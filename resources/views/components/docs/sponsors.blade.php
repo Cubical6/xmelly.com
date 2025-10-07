@@ -44,6 +44,11 @@
                             <img src="/www/assets/sponsors/cmsmax.png" class="w-auto h-10" />
                         </a>
                     </li>
+                    <li class="block">
+                        <a href="https://redberry.international/?ref=pestphp.com" target="_blank" rel="noopener" class="table">
+                            <img src="/www/assets/sponsors/redberry.png" class="w-auto h-9" />
+                        </a>
+                    </li>
                 </ul>
                 <ul class="pb-8 border-b border-white/10 drop-shadow md:gap-3 lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
                     <li class="md:block hidden w-full h-0 -mt-12"></li>
