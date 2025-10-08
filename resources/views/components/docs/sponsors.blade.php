@@ -7,115 +7,81 @@
     x-transition:leave-start="top-0"
     x-transition:leave-end="-top-full">
 
-    <div x-ref="dialog" x-on:keydown.escape.window="close()"
-        class="
-            lg:w-48 xl:w-56 lg:h-screen w-full
-            fixed lg:relative top-0 left-0 z-50
-            h-screen lg:h-auto
-            bg-white dark:bg-gray-800 bg-pattern lg:!bg-transparent lg:!bg-none
-            pt-16 lg:pt-0
-            text-left
-        ">
-            <div class="
-                docs-nav h-full lg:h-auto
-                pt-6 lg:pt-0.5 pb-6 px-4 lg:pl-0 lg:pr-4
-                overflow-y-auto overflow-x-auto lg:overflow-inherit
-            ">
-                <h2>Partners</h2>
+    <div x-ref="dialog" x-on:keydown.escape.window="close()" class="lg:w-48 xl:w-56 lg:h-screen w-full fixed lg:relative top-0 left-0 z-50 h-screen lg:h-auto bg-white dark:bg-gray-800 bg-pattern lg:!bg-transparent lg:!bg-none pt-16 lg:pt-0 text-left">
+        <div class="docs-nav h-full lg:h-auto pt-6 lg:pt-0.5 pb-6 px-4 lg:pl-0 lg:pr-4 overflow-y-auto overflow-x-auto lg:overflow-inherit">
+            <h2>Partners</h2>
 
-                <ul class="pb-8 border-b border-white/10 lg:gap-6 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6">
+            <ul
+                x-data="{
+                    sponsors: [
+                        { href: 'https://laracasts.com/?ref=pestphp', img: '/www/assets/sponsors/laracasts.svg', class: 'w-auto h-12' },
+                        { href: 'https://nativephp.com/?ref=pestphp.com', img: '/www/assets/sponsors/native-php.svg', class: 'w-auto h-12' },
+                        { href: 'https://coderabbit.ai/?ref=pestphp', img: '/www/assets/sponsors/coderabbit.svg', class: 'w-auto h-12' },
+                        { href: 'https://cmsmax.com/?ref=pestphp', img: '/www/assets/sponsors/cmsmax.png', class: 'w-auto h-10' },
+                        { href: 'https://redberry.international/?ref=pestphp.com', img: '/www/assets/sponsors/redberry.png', class: 'w-auto h-9' }
+                    ],
+                    shuffledSponsors: [],
+                    init() {
+                        let array = [...this.sponsors];
+                        for (let i = array.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [array[i], array[j]] = [array[j], array[i]];
+                        }
+                        this.shuffledSponsors = array;
+                    }
+                }"
+                x-init="init()"
+                class="pb-8 border-b border-white/10 lg:gap-6 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6"
+            >
+                <template x-for="sponsor in shuffledSponsors" :key="sponsor.img">
                     <li class="block">
-                        <a href="https://laracasts.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/laracasts.svg" class="w-auto h-12" />
+                        <a :href="sponsor.href" target="_blank" rel="noopener" class="table">
+                            <img :src="sponsor.img" :class="sponsor.class" />
                         </a>
                     </li>
+                </template>
+            </ul>
+
+            <ul
+                x-data="{
+                    sponsors: [
+                        { href: 'https://forge.laravel.com/?ref=pestphp', img: '/www/assets/sponsors/forge.svg', class: 'w-auto h-5' },
+                        { href: 'https://zapiet.com/?ref=pestphp', img: '/www/assets/sponsors/zapiet.svg', class: 'w-auto h-8' },
+                        { href: 'https://localazy.com/?ref=pestphp', img: '/www/assets/sponsors/localazy.svg', class: 'w-auto h-5' },
+                        { href: 'https://loadforge.com/?ref=pestphp', img: '/www/assets/sponsors/loadforge.svg', class: 'w-auto h-5' },
+                        { href: 'https://docuwriter.ai/?ref=pestphp', img: '/www/assets/sponsors/docuwriter-ai.svg', class: 'w-auto h-10' },
+                        { href: 'https://route4me.com/?ref=pestphp', img: '/www/assets/sponsors/route4me.svg', class: 'w-auto h-6' },
+                        { href: 'https://devtools-for-livewire.com/?ref=pestphp', img: '/www/assets/sponsors/devtools-for-livewire.svg', class: 'w-auto h-4' },
+                        { href: 'https://getnerdify.com/?ref=pestphp', img: '/www/assets/sponsors/nerdify.png', class: 'w-auto h-14' },
+                        { href: 'https://akaunting.com/?ref=pestphp', img: '/www/assets/sponsors/akaunting.svg', class: 'w-auto h-5' },
+                        { href: 'https://lambdatest.com/?ref=pestphp', img: '/www/assets/sponsors/lambdatest.svg', class: 'w-auto h-8' }
+                    ],
+                    shuffledSponsors: [],
+                    init() {
+                        let array = [...this.sponsors];
+                        for (let i = array.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [array[i], array[j]] = [array[j], array[i]];
+                        }
+                        this.shuffledSponsors = array;
+                    }
+                }"
+                x-init="init()"
+                class="pb-8 border-b border-white/10 drop-shadow lg:px-0 flex flex-wrap items-center justify-center gap-5 px-6 mt-6"
+            >
+                <template x-for="sponsor in shuffledSponsors" :key="sponsor.img">
                     <li class="block">
-                        <a href="https://nativephp.com/?ref=pestphp.com" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/native-php.svg" class="w-auto h-12" />
+                        <a :href="sponsor.href" target="_blank" rel="noopener" class="table">
+                            <img :src="sponsor.img" :class="sponsor.class" />
                         </a>
                     </li>
-                    <li class="block">
-                        <a href="https://coderabbit.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/coderabbit.svg" class="w-auto h-12" />
-                        </a>
-                    </li>
-                    <li class="block">
-                        <a href="https://cmsmax.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/cmsmax.png" class="w-auto h-10" />
-                        </a>
-                    </li>
-                    <li class="block">
-                        <a href="https://redberry.international/?ref=pestphp.com" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/redberry.png" class="w-auto h-9" />
-                        </a>
-                    </li>
-                </ul>
-                <ul class="pb-8 border-b border-white/10 drop-shadow md:gap-3 lg:px-0 flex flex-wrap items-center justify-center gap-3 px-6 mt-6">
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                        <a href="https://forge.laravel.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/forge.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-8"></li>
-                    <li class="block">
-                        <a href="https://zapiet.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/zapiet.svg" class="w-auto h-8" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://localazy.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/localazy.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://loadforge.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/loadforge.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://docuwriter.ai/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/docuwriter-ai.svg" class="w-auto h-10" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://route4me.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/route4me.svg" class="w-auto h-6" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://devtools-for-livewire.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/devtools-for-livewire.svg" class="w-auto h-4" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://getnerdify.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/nerdify.png" class="w-auto h-14" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://akaunting.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/akaunting.svg" class="w-auto h-5" />
-                        </a>
-                    </li>
-                    <li class="md:block hidden w-full h-0 -mt-12"></li>
-                    <li class="block">
-                        <a href="https://lambdatest.com/?ref=pestphp" target="_blank" rel="noopener" class="table">
-                            <img src="/www/assets/sponsors/lambdatest.svg" class="w-auto h-8" />
-                        </a>
-                    </li>
-                </ul>
-                <div class="mt-8 text-center">
-                    <a href="https://github.com/sponsors/nunomaduro" target="_blank" class="sm:w-auto focus:outline-none sm:mt-0 w-full px-8 py-2 text-sm font-bold text-white bg-transparent border border-white/50 rounded-lg">
-                        Your logo here
-                    </a>
-                </div>
+                </template>
+            </ul>
+            <div class="mt-8 text-center">
+                <a href="https://github.com/sponsors/nunomaduro" target="_blank" class="sm:w-auto focus:outline-none sm:mt-0 w-full px-8 py-2 text-sm font-bold text-white bg-transparent border border-white/50 rounded-lg">
+                    Your logo here
+                </a>
             </div>
+        </div>
     </div>
 </nav>

@@ -23,8 +23,8 @@
         <link rel="icon" href="/www/favicon.svg" type="image/svg+xml">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <script type="module" crossorigin src="/www/index.f77c192e.js"></script>
-      <link rel="stylesheet" href="/www/index-8032f1f2.css">
+      <script type="module" crossorigin src="/www/index.1a6bf503.js"></script>
+      <link rel="stylesheet" href="/www/index-a34bfb9e.css">
     </head>
     <body x-data="{ mobileMenuIsOpen: false }" class="relative w-full min-h-screen h-full text-white bg-[#040120] bg-top bg-no-repeat bg-pest">
         <div x-show="mobileMenuIsOpen" class="backdrop:bg-transparent lg:hidden z-50 relative">
@@ -196,23 +196,34 @@
             </section>
 
             <section id="partners" class="text-center py-8 sm:py-12 mx-auto max-w-7xl px-6 lg:px-8 motion-preset-blur-up-md motion-delay-[800ms] motion-duration-1000">
-                <p class="text-xs md:text-base uppercase font-thin font-mono tracking-widest text-white/40 motion-preset-blur-up-md motion-delay-[800ms] motion-duration-1000">These companies sponsor Pest Framework</p>
-                <div class="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 lg:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none motion-preset-blur-up-md motion-delay-[800ms] motion-duration-1000">
-                    <a href="https://cmsmax.com/?ref=pestphp" target="_blank">
-                        <img src="/www/assets/sponsors/cmsmax.png" alt="CMS Max" class="h-7 md:h-9 object-contain" />
-                    </a>
-                    <a href="https://coderabbit.ai/?ref=pestphp" target="_blank">
-                        <img src="/www/assets/sponsors/coderabbit.svg" alt="CodeRabbit" class="h-7 md:h-9 object-contain" />
-                    </a>
-                    <a href="https://laracasts.com/?ref=pestphp" target="_blank">
-                        <img src="/www/assets/sponsors/laracasts.svg" alt="Laracasts" class="h-6 md:h-6 object-contain" />
-                    </a>
-                    <a href="https://nativephp.com/?ref=pestphp.com" target="_blank">
-                        <img src="/www/assets/sponsors/native-php.svg?20082025" alt="Native PHP" class="h-6 md:h-7 object-contain" />
-                    </a>
-                    <a href="https://redberry.international/?ref=pestphp.com" target="_blank">
-                        <img src="/www/assets/sponsors/redberry.png?20082025" alt="Redberry" class="h-6 md:h-7 object-contain" />
-                    </a>
+                <p class="text-xs md:text-base uppercase font-thin font-mono tracking-widest text-white/40 motion-preset-blur-up-md motion-delay-[800ms] motion-duration-1000">These companies sponsor Pest Frameworkss</p>
+                <div x-data="{
+                        sponsors: [
+                            { href: 'https://cmsmax.com/?ref=pestphp', img: '/www/assets/sponsors/cmsmax.png', alt: 'CMS Max', class: 'h-7 md:h-9 object-contain' },
+                            { href: 'https://coderabbit.ai/?ref=pestphp', img: '/www/assets/sponsors/coderabbit.svg', alt: 'CodeRabbit', class: 'h-7 md:h-9 object-contain' },
+                            { href: 'https://laracasts.com/?ref=pestphp', img: '/www/assets/sponsors/laracasts.svg', alt: 'Laracasts', class: 'h-6 md:h-6 object-contain' },
+                            { href: 'https://nativephp.com/?ref=pestphp.com', img: '/www/assets/sponsors/native-php.svg?20082025', alt: 'Native PHP', class: 'h-6 md:h-7 object-contain' },
+                            { href: 'https://redberry.international/?ref=pestphp.com', img: '/www/assets/sponsors/redberry.png?20082025', alt: 'Redberry', class: 'h-6 md:h-7 object-contain' }
+                        ],
+                        shuffledSponsors: [],
+                        init() {
+                            let array = [...this.sponsors];
+                            for (let i = array.length - 1; i > 0; i--) {
+                                const j = Math.floor(Math.random() * (i + 1));
+                                [array[i], array[j]] = [array[j], array[i]];
+                            }
+                            this.shuffledSponsors = array;
+                        }
+                    }"
+                    x-init="init()"
+                >
+                    <div class="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 lg:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none motion-preset-blur-up-md motion-delay-[800ms] motion-duration-1000">
+                        <template x-for="sponsor in shuffledSponsors" :key="sponsor.alt">
+                            <a :href="sponsor.href" target="_blank">
+                                <img :src="sponsor.img" :alt="sponsor.alt" :class="sponsor.class" />
+                            </a>
+                        </template>
+                    </div>
                 </div>
 
                 <div class="relative mx-auto pt-8 will-change-transform overflow-hidden motion-preset-blur-up-md motion-delay-[1000ms] motion-duration-1000" style="mask-image: linear-gradient(to right, #0000, #000 10%, #000 90%, #0000)">
