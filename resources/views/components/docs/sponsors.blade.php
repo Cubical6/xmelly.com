@@ -14,11 +14,11 @@
             <ul
                 x-data="{
                     sponsors: [
-                        { href: 'https://laracasts.com/?ref=pestphp', img: '/www/assets/sponsors/laracasts.svg', class: 'w-auto h-12' },
-                        { href: 'https://nativephp.com/?ref=pestphp.com', img: '/www/assets/sponsors/native-php.svg', class: 'w-auto h-12' },
-                        { href: 'https://coderabbit.ai/?ref=pestphp', img: '/www/assets/sponsors/coderabbit.svg', class: 'w-auto h-12' },
-                        { href: 'https://cmsmax.com/?ref=pestphp', img: '/www/assets/sponsors/cmsmax.png', class: 'w-auto h-10' },
-                        { href: 'https://redberry.international/?ref=pestphp.com', img: '/www/assets/sponsors/redberry.png', class: 'w-auto h-9' }
+                        { href: 'https://laracasts.com/?ref=pestphp', img: '/www/assets/sponsors/laracasts.svg', class: 'w-auto' },
+                        { href: 'https://nativephp.com/?ref=pestphp.com', img: '/www/assets/sponsors/native-php.svg', class: 'w-auto' },
+                        { href: 'https://coderabbit.ai/?ref=pestphp', img: '/www/assets/sponsors/coderabbit.svg', class: 'w-auto' },
+                        { href: 'https://cmsmax.com/?ref=pestphp', img: '/www/assets/sponsors/cmsmax.png', class: 'w-auto' },
+                        { href: 'https://redberry.international/laravel-development/?utm_source=pest&utm_medium=banner&utm_campaign=pest_sponsorship', img: '/www/assets/sponsors/redberry.png', class: 'w-auto' }
                     ],
                     shuffledSponsors: [],
                     init() {
