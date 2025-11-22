@@ -64,7 +64,7 @@ button {
 
 /* ========================================
    FIREFOX PERFORMANCE OPTIMIZATIONS
-   Fase 1: Accessibility & Browser-specific improvements
+   Phase 1: Accessibility & Browser-specific improvements
    ======================================== */
 
 /* Respect user motion preferences - Accessibility & Performance */
@@ -89,7 +89,7 @@ button {
 }
 
 /* Firefox-specific blur optimization */
-@-moz-document url-prefix() {
+@supports (-moz-appearance: none) {
     /* Lighter blur for better Firefox performance */
     .blur-\[20px\] {
         filter: blur(15px);
