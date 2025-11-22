@@ -90,13 +90,49 @@ button {
 
 /* Firefox-specific blur optimization */
 @supports (-moz-appearance: none) {
-    /* Lighter blur for better Firefox performance */
+    /* Lighter blur for better Firefox scroll performance */
     .blur-\[20px\] {
-        filter: blur(15px);
+        filter: blur(12px);
     }
 
     /* Fallback for mobile menu backdrop blur on Firefox */
     .backdrop-blur-sm {
         backdrop-filter: blur(3px);
+    }
+
+    /* Optimize fixed elements specifically in Firefox */
+    .fixed {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* ========================================
+   FIREFOX PERFORMANCE OPTIMIZATIONS
+   Phase 1.5: Scroll Performance & GPU Acceleration
+   ======================================== */
+
+/* Force GPU compositing for smoother scrolling */
+.fixed {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize beam animation - add transform to keyframes */
+@keyframes animate-beams {
+    0% {
+        background-position: 0% 0%, 100% 100%;
+        transform: translateZ(0);
+    }
+    100% {
+        background-position: 150% 100%, -100% -50%;
+        transform: translateZ(0);
+    }
+}
+
+/* Remove will-change when animations are disabled for better memory usage */
+@media (prefers-reduced-motion: reduce) {
+    .beam-animation,
+    svg.mix-blend-overlay {
+        will-change: auto;
     }
 }
