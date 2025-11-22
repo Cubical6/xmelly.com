@@ -61,3 +61,42 @@ button {
 .tippy-arrow{width:16px;height:16px; @apply text-blue-950;}
 .tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}
 .tippy-content{position:relative;padding:5px 9px;z-index:1}
+
+/* ========================================
+   FIREFOX PERFORMANCE OPTIMIZATIONS
+   Fase 1: Accessibility & Browser-specific improvements
+   ======================================== */
+
+/* Respect user motion preferences - Accessibility & Performance */
+@media (prefers-reduced-motion: reduce) {
+    .beam-animation {
+        animation: none !important;
+        opacity: 0.3;
+    }
+
+    [style*="animation: marquee"] {
+        animation: none !important;
+    }
+
+    /* Disable all animations and transitions */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Firefox-specific blur optimization */
+@-moz-document url-prefix() {
+    /* Lighter blur for better Firefox performance */
+    .blur-\[20px\] {
+        filter: blur(15px);
+    }
+
+    /* Fallback for mobile menu backdrop blur on Firefox */
+    .backdrop-blur-sm {
+        backdrop-filter: blur(3px);
+    }
+}
