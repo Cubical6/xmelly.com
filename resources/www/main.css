@@ -55,11 +55,25 @@ button {
 
 /* ========================================
    FIREFOX PERFORMANCE OPTIMIZATIONS
-   Phase 1: Accessibility & Browser-specific improvements
+   Comprehensive scroll lag fix
    ======================================== */
+
+/* Global smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optimize all scrollable areas */
+* {
+    scrollbar-width: thin;
+}
 
 /* Respect user motion preferences - Accessibility & Performance */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .beam-animation {
         animation: none !important;
         opacity: 0.3;
@@ -79,39 +93,67 @@ button {
     }
 }
 
-/* Firefox-specific blur optimization */
+/* Firefox-specific optimizations */
 @supports (-moz-appearance: none) {
-    /* Lighter blur for better Firefox scroll performance */
-    .blur-\[20px\] {
-        filter: blur(12px);
+    /* Critical: Disable expensive blur effects in Firefox */
+    [class*="blur-"] {
+        filter: none !important;
     }
 
-    /* Fallback for mobile menu backdrop blur on Firefox */
-    .backdrop-blur-sm {
-        backdrop-filter: blur(3px);
+    /* Disable backdrop blur in Firefox - major performance killer */
+    [class*="backdrop-blur"] {
+        backdrop-filter: none !important;
+        background-color: rgba(17, 24, 39, 0.95) !important;
+    }
+
+    /* Optimize beam background for Firefox */
+    .beam-background {
+        background-size: 200%, 150%;
+    }
+
+    /* Reduce animation complexity */
+    .beam-animation {
+        animation-duration: 150s;
+    }
+
+    /* Force hardware acceleration on scroll containers */
+    body,
+    html {
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+    }
+
+    /* Optimize overflow containers */
+    [class*="overflow-"] {
+        contain: layout style paint;
+        will-change: scroll-position;
     }
 }
-
-/* ========================================
-   FIREFOX PERFORMANCE OPTIMIZATIONS
-   Phase 1.5: Scroll Performance & GPU Acceleration
-   ======================================== */
 
 /* Force GPU compositing for smoother scrolling */
 .fixed {
     transform: translateZ(0);
     backface-visibility: hidden;
+    will-change: transform;
 }
 
-/* Optimize beam animation - add transform to keyframes */
+/* Optimize absolute positioned elements */
+.absolute {
+    contain: layout style;
+}
+
+/* Optimize beam animation */
+.beam-animation {
+    will-change: background-position;
+    contain: layout style paint;
+}
+
 @keyframes animate-beams {
     0% {
         background-position: 0% 0%, 100% 100%;
-        transform: translateZ(0);
     }
     100% {
         background-position: 150% 100%, -100% -50%;
-        transform: translateZ(0);
     }
 }
 
